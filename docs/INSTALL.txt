@@ -1,0 +1,17 @@
+ploneconf2015.theme Installation
+--------------------------------
+
+To install ploneconf2015.theme using zc.buildout and the plone.recipe.zope2instance
+recipe to manage your project, you can do this:
+
+* Add ``ploneconf2015.theme`` to the list of eggs to install, e.g.:
+
+    [buildout]
+    ...
+    eggs =
+        ...
+        ploneconf2015.theme
+       
+* Re-run buildout, e.g. with:
+
+    $ ./bin/buildout
