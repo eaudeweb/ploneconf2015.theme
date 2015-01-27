@@ -1,12 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <title>Theme template</title>
-    <link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico" />
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
 
-    <p>Replace this template with your own theme</p>
+  <div class="img img-responsive">
+    <img src="img/ploneconf-illustration.svg">
+  </div>
 
+  <div class="container">
+    <div class="navbar navbar-default">
+      <div class="navbar-header">
+        <button type="button" 
+                class="navbar-toggle" 
+                data-toggle="collapse" 
+                data-target=".navbar-collapse">
+          <span class="fa fa-bars"></span>
+        </button>
+        <a class="navbar-brand" href="#">Plone Conf. Bucharest 2015</a>
+      </div>
+
+      <div class="navbar-collapse collapse">
+        <div class="navbar-right navbar-btn">
+          <a href="" class="btn btn-success btn-block btn-rounded">Ticket details</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Speakers</a></li>
+          <li><a href="#">Location</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section id="schedule">
+        <h2 class="text-center">Schedule</h2>
+        <ul class="welcome">
+          <li>
+            <a href="" class="btn btn-outline btn-block text-center">
+              <time class="date">12 - 13<small>October</small></time>
+              <span class="icon"><i class="fa fa-graduation-cap fa-3x"></i></span>
+              <span class="name">Training</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="btn btn-outline btn-block text-center">
+              <time class="date">14 - 16<small>October</small></time>
+              <span class="icon"><i class="fa fa-microphone fa-3x"></i></span>
+              <span class="name">Conference</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="btn btn-outline btn-block text-center">
+              <time class="date">17 - 18<small>October</small></time>
+              <span class="icon"><i class="fa fa-terminal fa-3x"></i></span>
+              <span class="name">Sprints</strong>
+            </a>
+          </li>
+        </ul>
+        <div class="text-center">
+          <a href="" class="btn btn-default">See the full schedule</a>
+        </div>
+    </section>
+
+    <section id="speakers">
+        <h2 class="text-center">Keynote speaker</h2>
+
+        <div class="well well-primary">
+
+          <div class="media">
+            <div class="media-left">
+              <a href="">
+                <img src="img/speaker.jpg" 
+                     alt="" 
+                     class="media-object img-rounded">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Somebody that I used to know<br>
+                <small>Job title</small></h4>
+              <p class="no-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, sint.</p>
+            </div>
+            <a href="#" class="media-right btn btn-success">
+              <span class="fa fa-chevron-right"></span>
+            </a>
+          </div>
+
+        </div>
+
+    </section>
+
+    <section id="location">
+      <h2 class="text-center">Location</h2>
+
+
+      <!-- <div class="row">
+        <div class="col-sm-6">
+          <p>The conference venue is located in the heart of Bucharest, at the Intercontinental Hotel. Most the attractions are within walking distance from there.</p>
+          
+          <p>
+            <a href="" class="btn btn-default">Get directions</a>
+            <a href="" class="btn btn-outline">Things to do</a>
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <img src="img/intercontinental.png" 
+               alt=""
+               class="img-responsive img-rounded">
+        </div>
+      </div> -->
+
+      <div id="map-canvas"
+           data-address="Intercontinental, Bucuresti"
+           style="min-height: 450px;"></div>
+
+
+    </section>
+
+    <section id="sponsors">
+      <h2 class="text-center">Sponsors</h2>
+
+      <h3 class="text-center">Gold sponsors</h3>
+
+      <ul class="sponsors-list">
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="text-center">Silver sponsors</h3>
+
+      <ul class="sponsors-list">
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="text-center">Bronze sponsors</h3>
+
+      <ul class="sponsors-list">
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" class="thumbnail">
+            <img src="img/edw-fancy-icon.svg" alt="">
+          </a>
+        </li>
+      </ul>
+
+      <div class="text-center">
+        <a href="" class="btn btn-default">Become a sponsor</a>
+      </div>
+
+    </section>
+
+    <section id="footer" class="text-center">
+        &copy; Plone bla bla bla.
+    </section>
+  </div>
+
+
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript"
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgzwlVgB2yRIIW89qbpi9dAiWlD1DAjy0&language=ro"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
