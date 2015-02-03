@@ -3,14 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
 
-  <div class="img img-responsive">
-    <img src="img/ploneconf-illustration.svg">
+  <div class="header-logo">
+    <div class=" container">
+      <img class="logo" src="img/ploneconf2015-logo-light.svg" alt="Plone conf. 2015 logo">
+    </div>
   </div>
 
+    <div id="scene-cityscape" class="parallax">
+      <img id="background" class="layer-4" src="img/graphic-background.svg">
+      <img id="furthest" class="layer-3" src="img/graphic-furthest.svg">
+      <img id="further" class="layer-2" src="img/graphic-further.svg">
+      <img id="far" class="layer-1" src="img/graphic-far.svg">
+      <img id="foreground" class="layer-0" src="img/graphic-foreground.svg">
+    </div>
   <div class="container">
     <div class="navbar navbar-default">
       <div class="navbar-header">
@@ -25,17 +34,23 @@
 
       <div class="navbar-collapse collapse">
         <div class="navbar-right navbar-btn">
-          <a href="" class="btn btn-success btn-block btn-rounded">Ticket details</a>
+          <a href="" class="btn btn-success btn-block btn-rounded">Buy ticket</a>
         </div>
+        <!-- <div class="navbar-right navbar-btn">
+          <a href="" class="btn btn-outline btn-block btn-rounded">Submit talk</a>
+        </div> -->
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Schedule</a></li>
           <li><a href="#">Training</a></li>
-          <li><a href="#">Speakers</a></li>
           <li><a href="#">Location</a></li>
+          <li><a href="#">Submit talk</a></li>
         </ul>
       </div>
     </div>
+  </div>
 
+
+  <div id="main" class="container">
     <section id="schedule">
         <h2 class="text-center">Schedule</h2>
         <ul class="welcome">
@@ -61,12 +76,20 @@
             </a>
           </li>
         </ul>
-        <div class="text-center">
+
+        <p class="text-center">
           <a href="" class="btn btn-default">See the full schedule</a>
+        </p>
+
+        <p class="text-center">The entire conference is organized in the same premises, with dedicated staffs at out disposal to ensure that quality servicess are available at all times.</p>
+
+        <div>
+          <p class="sr-only">"All-in-one" 2015 Plone Conference</p>
         </div>
+
     </section>
 
-    <section id="speakers">
+    <!-- <section id="speakers">
         <h2 class="text-center">Keynote speaker</h2>
 
         <div class="well well-primary">
@@ -91,37 +114,95 @@
 
         </div>
 
-    </section>
+    </section> -->
 
     <section id="location">
       <h2 class="text-center">Location</h2>
+  
+      <div class="row">
+        <div class="col-md-7">
+          <a id="location-photos" href="#" title="Map, venue, directions and accomodation">
+            <img id="location-1" src="img/location-intercontinental.jpg">
+            <img id="location-2" src="img/location-calea-victoriei.jpg">
+            <img id="location-3" src="img/location-centrul-vechi.jpg">
+          </a>
+        </div>
 
+        <div class="col-md-5">
+          <p>The conference will be held in Romania's vibrant capital, at one of Bucharest's more imposing landmarks, the Intercontinental.</p>
 
-      <!-- <div class="row">
-        <div class="col-sm-6">
-          <p>The conference venue is located in the heart of Bucharest, at the Intercontinental Hotel. Most the attractions are within walking distance from there.</p>
+          <p>Bucharest is an eclectic burst of metropolitan and intelectual ambition. It's many attractions, ecstatic night-life and immersive underground culture are within walking distance of the conference venue.</p>
           
-          <p>
-            <a href="" class="btn btn-default">Get directions</a>
-            <a href="" class="btn btn-outline">Things to do</a>
-          </p>
+          <div>
+            <a href="" class="btn btn-primary">View map</a>
+            <a href="" class="btn btn-link">Things to do</a> |
+            <a href="" class="btn btn-link">Get directions</a>
+          </div>
         </div>
-        <div class="col-sm-6">
-          <img src="img/intercontinental.png" 
-               alt=""
-               class="img-responsive img-rounded">
-        </div>
-      </div> -->
 
-      <div id="map-canvas"
-           data-address="Intercontinental, Bucuresti"
-           style="min-height: 450px;"></div>
+      </div>
 
 
     </section>
 
+    
+
+
+    <section id="goals">
+      <h2 class="text-center">This year's goals</h2>
+      <ul class="goal-list">
+        <li class="goal">
+          <img class="img-responsive" src="img/graphic-affirm.svg">
+          <p><strong>affirm</strong> the performance, innovation and team spirit surrounding the Plone community</p></li>
+        <li class="goal">
+          <img class="img-responsive" src="img/graphic-experience.svg">
+          <p><strong>experience</strong> a fun and productive event that's packed with insightful lectures and unforgetable parties</p></li>
+        <li class="goal">
+          <img class="img-responsive" src="img/graphic-welcome.svg">
+          <p><strong>welcome</strong> Romania, a Plone Conf. debutant, and it's Plone enthusiasts among the more established members</p></li>
+      </ul>
+    </section>
+
+    <section id="updates">
+      <h2 class="text-center">Updates</h2>
+
+      <p>Be sure to get only the most relevant updates concerning this year's Plone Conference.</p>
+      <form class="form-group">
+        <label for="">Subscribe to mailing list</label>
+        <div class="input-group">
+          <input type="email" placeholder="Email address"
+                 class="form-control">
+          <div class="input-group-btn">
+            <button class="btn btn-primary" type="submit">Sign up</button>
+          </div>
+        </div>
+      </form>
+
+      <ul class="update-icons">
+        <li>
+          <img src="img/icon-twitter.svg" alt="">
+          <h6>Twitter</h6>
+          <a href>#ploneconf</a>
+        </li>
+        <li>
+          <img src="img/icon-url.svg" alt="">
+          <h6>URL</h6>
+          <a href="">community.plone.org</a>
+        </li>
+        <li>
+          <img src="img/icon-irc.svg" alt="">
+          <h6>IRC</h6>
+          <a href="">#plone</a>
+        </li>
+      </ul>
+      
+    </section>
+
+
     <section id="sponsors">
       <h2 class="text-center">Sponsors</h2>
+
+      <p>We thank our sponsors for helping us host the 2015 Plone Conference.</p>
 
       <h3 class="text-center">Gold sponsors</h3>
 
@@ -205,7 +286,19 @@
     </section>
 
     <section id="footer" class="text-center">
-        &copy; Plone bla bla bla.
+      <div class="img">
+        <img class="logo" src="img/ploneconf2015-logo-dark.svg" alt="Plone conf. 2015 logo">
+      </div>
+
+      <a href="" class="btn btn-success btn-rounded">Buy ticket</a>
+
+      <p>
+        <a href="" class="btn btn-link">Schedule</a> |
+        <a href="" class="btn btn-link">Training</a> |
+        <a href="" class="btn btn-link">Location</a> |
+        <a href="" class="btn btn-link">Submit talk</a>
+      </p>
+      <p>&copy; Plone bla bla bla.</p>
     </section>
   </div>
 
@@ -213,8 +306,13 @@
   <!-- scripts -->
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript"
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgzwlVgB2yRIIW89qbpi9dAiWlD1DAjy0&language=ro"></script>
-  <script src="js/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgzwlVgB2yRIIW89qbpi9dAiWlD1DAjy0"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="js/TimelineMax.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/jquery.scrollmagic.min.js"></script>
+  <script src="js/jquery.scrollmagic.debug.js"></script>
+  <script src="js/homepage.js"></script>
 </body>
 </html>
