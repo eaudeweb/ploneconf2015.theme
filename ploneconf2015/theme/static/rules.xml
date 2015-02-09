@@ -6,39 +6,35 @@
 
     <!-- Front page -->
     <rules css:if-content="body.section-front-page #visual-portal-wrapper">
-
         <theme href="index.html" />
-        <notheme css:if-content="body.userrole-authenticated" />
-        <replace css:theme="html head title" css:content="html head title" />
 
-        <!-- Drop the favicon spec coming from content; we'll use the one in the theme. -->
-        <!--<drop content="/html/head/link[@rel='shortcut icon']" />-->
+        <!-- Schedule portlet -->
+        <copy attributes="href" css:theme="#schedule a.training" css:content="a.schedule-training" />
+        <copy attributes="href" css:theme="#schedule a.conference" css:content="a.schedule-conference" />
+        <copy attributes="href" css:theme="#schedule a.sprints" css:content="a.schedule-sprints" />
+        <copy attributes="href" css:theme="#schedule a.full" css:content="a.schedule-full" />
 
-        <before css:theme-children="html head" css:content="html head base" />
-        <merge attributes="class" css:theme="body" css:content="body" />
+        <!-- Location portlet -->
+        <copy attributes="href" css:theme="#location-photos" css:content="a.location-photos" />
+        <copy attributes="href" css:theme="#location a.map" css:content="a.location-map" />
+        <copy attributes="href" css:theme="#location a.to-do" css:content="a.location-to-do" />
+        <copy attributes="href" css:theme="#location a.directions" css:content="a.location-directions" />
 
-        <replace css:theme-children="a.navbar-brand">
-          <xsl:value-of select="$portal_title" />
-        </replace>
+        <!-- Sponsorship -->
+        <copy attributes="href" css:theme="#sponsors a.btn" css:content="a.sponsorship" />
 
-        <!-- Global nav -->
-        <replace css:theme-children="ul.nav">
-              <xsl:for-each css:select="#portal-globalnav li">
-                    <xsl:element name='li'>
-                        <xsl:attribute name="id">
-                            <xsl:value-of select="@id" />
-                        </xsl:attribute>
-                        <xsl:copy-of select="./*"/>
-                    </xsl:element>
-              </xsl:for-each>
-          </replace>
+        <!-- Footer -->
+        <copy attributes="href" css:theme="#footer a.schedule" css:content="a.footer-schedule" />
+        <copy attributes="href" css:theme="#footer a.training" css:content="a.footer-training" />
+        <copy attributes="href" css:theme="#footer a.location" css:content="a.footer-location" />
+        <copy attributes="href" css:theme="#footer a.submit-talk" css:content="a.footer-submit-talk" />
 
     </rules>
 
     <!-- Rest of the site -->
     <rules css:if-content="body #visual-portal-wrapper">
-
         <theme href="second.html" />
+
         <notheme css:if-content="body.userrole-authenticated" />
         <replace css:theme="html head title" css:content="html head title" />
 
@@ -48,21 +44,50 @@
         <before css:theme-children="html head" css:content="html head base" />
         <merge attributes="class" css:theme="body" css:content="body" />
 
-        <replace css:theme-children="a.navbar-brand">
-          <xsl:value-of select="$portal_title" />
+        !-- Site title -->
+        <replace css:theme="a.navbar-brand">
+          <xsl:element name='a'>
+            <xsl:attribute name="class">
+              navbar-brand
+            </xsl:attribute>
+            <xsl:attribute name="href">
+              <xsl:value-of select="$portal_url" />
+            </xsl:attribute>
+            <xsl:value-of select="$portal_title" />
+          </xsl:element>
         </replace>
 
         <!-- Global nav -->
-        <replace css:theme-children="ul.nav">
+        <replace css:theme-children="ul.navbar-right">
               <xsl:for-each css:select="#portal-globalnav li">
                     <xsl:element name='li'>
                         <xsl:attribute name="id">
                             <xsl:value-of select="@id" />
                         </xsl:attribute>
+                        <xsl:attribute name="class">
+                            <xsl:value-of select="@class" />
+                        </xsl:attribute>
                         <xsl:copy-of select="./*"/>
                     </xsl:element>
               </xsl:for-each>
           </replace>
+
+      <!-- Navigation portlet -->
+        <replace css:theme-children="ul.nav-stacked">
+              <xsl:for-each css:select="dl.portletNavigationTree ul li">
+                    <xsl:element name='li'>
+                        <xsl:attribute name="id">
+                            <xsl:value-of select="@id" />
+                        </xsl:attribute>
+                        <xsl:attribute name="class">
+                            <xsl:value-of select="@class" />
+                        </xsl:attribute>
+                        <xsl:copy-of select="./*"/>
+                    </xsl:element>
+              </xsl:for-each>
+          </replace>
+
+        <copy attributes="href" css:theme="a.tickets" css:content="a.tickets-buy" />
 
         <!-- Content -->
         <replace css:theme-children=".col-sm-9" css:content-children="#content" />
