@@ -4,42 +4,68 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <!-- Apply the following rules to standard Plone pages -->
-    <rules css:if-content="#visual-portal-wrapper">
+    <!-- Front page -->
+    <rules css:if-content="body.section-front-page #visual-portal-wrapper">
 
         <theme href="index.html" />
-
-        <!-- Replace title with Plone's page title  -->
+        <notheme css:if-content="body.userrole-authenticated" />
         <replace css:theme="html head title" css:content="html head title" />
 
         <!-- Drop the favicon spec coming from content; we'll use the one in the theme. -->
-        <drop content="/html/head/link[@rel='shortcut icon']" />
+        <!--<drop content="/html/head/link[@rel='shortcut icon']" />-->
 
-        <!-- Copy base tag from Plone -->
         <before css:theme-children="html head" css:content="html head base" />
-
-        <!-- Copy link, style, meta tags from Plone head -->
-        <after css:theme-children="html head"
-               content="/html/head/link | /html/head/style | /html/head/meta" />
-
-        <!-- merge classes from Plone body with theme body -->
         <merge attributes="class" css:theme="body" css:content="body" />
 
-        <!-- Copy script tags from Plone head to end of body -->
-        <after css:theme-children="html body" css:content="html head script" />
+        <replace css:theme-children="a.navbar-brand">
+          <xsl:value-of select="$portal_title" />
+        </replace>
 
-        <!-- Move inline scripts in content to end of body -->
-        <drop css:content="body script" />
-        <after css:theme-children="html body" css:content="html body script" method="raw" />
+        <!-- Global nav -->
+        <replace css:theme-children="ul.nav">
+              <xsl:for-each css:select="#portal-globalnav li">
+                    <xsl:element name='li'>
+                        <xsl:attribute name="id">
+                            <xsl:value-of select="@id" />
+                        </xsl:attribute>
+                        <xsl:copy-of select="./*"/>
+                    </xsl:element>
+              </xsl:for-each>
+          </replace>
 
-        <!-- Insert your own rules here -->
+    </rules>
 
-        <!-- This rule pulls in the whole Plone layout. You'll typically replace this
-             with rules that copy particular parts of the content into particular
-             targets in your theme.
-         -->
-        <after css:theme="body p" css:content="#visual-portal-wrapper" />
+    <!-- Rest of the site -->
+    <rules css:if-content="body #visual-portal-wrapper">
 
+        <theme href="second.html" />
+        <notheme css:if-content="body.userrole-authenticated" />
+        <replace css:theme="html head title" css:content="html head title" />
+
+        <!-- Drop the favicon spec coming from content; we'll use the one in the theme. -->
+        <!--<drop content="/html/head/link[@rel='shortcut icon']" />-->
+
+        <before css:theme-children="html head" css:content="html head base" />
+        <merge attributes="class" css:theme="body" css:content="body" />
+
+        <replace css:theme-children="a.navbar-brand">
+          <xsl:value-of select="$portal_title" />
+        </replace>
+
+        <!-- Global nav -->
+        <replace css:theme-children="ul.nav">
+              <xsl:for-each css:select="#portal-globalnav li">
+                    <xsl:element name='li'>
+                        <xsl:attribute name="id">
+                            <xsl:value-of select="@id" />
+                        </xsl:attribute>
+                        <xsl:copy-of select="./*"/>
+                    </xsl:element>
+              </xsl:for-each>
+          </replace>
+
+        <!-- Content -->
+        <replace css:theme-children=".col-sm-9" css:content-children="#content" />
     </rules>
 
 </rules>
