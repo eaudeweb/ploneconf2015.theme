@@ -6,21 +6,18 @@
 
   <!-- Front page -->
   <rules>
+    <notheme css:if-not-content="body.userrole-anonymous"/>
     <theme href="second.html"/>
     <theme href="index.html" css:if-content="body.section-front-page #visual-portal-wrapper"/>
-    <notheme css:if-content="body.userrole-authenticated"/>
-    <drop css:theme="#plone-left" css:if-not-content="#portal-column-one"/>
 
-    <!-- Content -->
-    <replace css:theme-children="#plone-content" css:content-children="#content"/>
-
-    <xi:include href="rules/head.xml"/>
-    <xi:include href="rules/title.xml"/>
-    <xi:include href="rules/navigation.xml"/>
-    <xi:include href="rules/forms.xml"/>
-
-    <!-- Front page -->
-    <xi:include href="rules/front.xml"/>
+    <rules css:if-content="body.userrole-anonymous">
+      <xi:include href="rules/head.xml" />
+      <xi:include href="rules/title.xml" />
+      <xi:include href="rules/navigation.xml" />
+      <xi:include href="rules/forms.xml" />
+      <xi:include href="rules/front.xml"/>
+      <xi:include href="rules/content.xml"/>
+    </rules>
 
   </rules>
 
