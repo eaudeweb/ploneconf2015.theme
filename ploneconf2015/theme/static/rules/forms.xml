@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- Forms -->
+  <replace css:content=".formHelp">
+      <div class="formHelp muted">
+          <xsl:apply-templates select="./*|./text()"/>
+      </div>
+  </replace>
+
+  <replace css:content="input">
+      <xsl:choose>
+          <xsl:when css:test="[type='submit']">
+              <button>
+                  <xsl:choose>
+                      <xsl:when css:test=".searchButton, .context">
+                          <xsl:attribute name="class">btn btn-primary</xsl:attribute>
+                      </xsl:when>
+                      <xsl:when css:test=".delete">
+                          <xsl:attribute name="class">btn btn-danger</xsl:attribute>
+                      </xsl:when>
+                      <xsl:otherwise>
+                          <xsl:attribute name="class">btn</xsl:attribute>
+                      </xsl:otherwise>
+                  </xsl:choose>
+                  <xsl:value-of select="./@value"/>
+              </button>
+          </xsl:when>
+          <xsl:when css:test="[type='checkbox']">
+              <input>
+                  <xsl:copy-of select="@*" />
+                  <xsl:attribute name="class">pull-left</xsl:attribute>
+              </input>
+          </xsl:when>
+          <xsl:otherwise>
+              <xsl:copy-of select="."/>
+          </xsl:otherwise>
+      </xsl:choose>
+  </replace>
+
+</rules>
