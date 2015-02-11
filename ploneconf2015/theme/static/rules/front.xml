@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css">
+
+  <!-- Schedule portlet -->
+  <copy attributes="href" css:theme="#schedule a.training" css:content="a.schedule-training" />
+  <copy attributes="href" css:theme="#schedule a.conference" css:content="a.schedule-conference" />
+  <copy attributes="href" css:theme="#schedule a.sprints" css:content="a.schedule-sprints" />
+  <copy attributes="href" css:theme="#schedule a.full" css:content="a.schedule-full" />
+
+  <!-- Location portlet -->
+  <copy attributes="href" css:theme="#location-photos" css:content="a.location-photos" />
+  <copy attributes="href" css:theme="#location a.map" css:content="a.location-map" />
+  <copy attributes="href" css:theme="#location a.to-do" css:content="a.location-to-do" />
+  <copy attributes="href" css:theme="#location a.directions" css:content="a.location-directions" />
+
+  <!-- Sponsorship -->
+  <copy attributes="href" css:theme="#sponsors a.btn" css:content="a.sponsorship" />
+
+  <!-- Footer -->
+  <copy attributes="href" css:theme="#footer a.schedule" css:content="a.footer-schedule" />
+  <copy attributes="href" css:theme="#footer a.training" css:content="a.footer-training" />
+  <copy attributes="href" css:theme="#footer a.location" css:content="a.footer-location" />
+  <copy attributes="href" css:theme="#footer a.submit-talk" css:content="a.footer-submit-talk" />
+
+  <!-- Buy ticket -->
+  <copy attributes="href" css:theme="#plone-buy-tickets-header" css:content="a.tickets-buy" />
+  <copy attributes="href" css:theme="#plone-buy-tickets-footer" css:content="a.tickets-buy" />
+
+</rules>
