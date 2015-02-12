@@ -4,6 +4,7 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="diazotheme.test">
 
   <i18n:registerTranslations directory="locales" />
@@ -20,6 +21,12 @@
     directory="static"
     type="theme"
     />
+
+  <cmf:registerDirectory
+     name="skins"
+     directory="skins"
+     recursive="True"
+     />
 
   <browser:jbot
       directory="templates"

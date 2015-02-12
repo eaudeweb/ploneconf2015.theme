@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css">
+
+  <drop css:theme="#plone-left" css:if-not-content="#portal-column-one"/>
+  <replace css:theme-children="#plone-content" css:content-children="#content"/>
+
+</rules>

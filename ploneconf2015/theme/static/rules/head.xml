@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- Head -->
+  <replace css:theme="html head title" css:content="html head title" />
+  <before css:theme-children="html head" css:content="html head base" />
+  <after theme="/html/head/title">
+    <link rel="stylesheet" href="{$portal_url}/ploneCustom.css" />
+  </after>
+  <merge attributes="class" css:theme="body" css:content="body" />
+
+</rules>

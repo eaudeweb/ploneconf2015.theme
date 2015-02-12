@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- Site title -->
+  <replace css:theme="a.navbar-brand">
+    <xsl:element name='a'>
+      <xsl:attribute name="class">
+        navbar-brand
+      </xsl:attribute>
+      <xsl:attribute name="href">
+        <xsl:value-of select="$portal_url"/>
+      </xsl:attribute>
+      <xsl:value-of select="$portal_title"/>
+    </xsl:element>
+  </replace>
+
+</rules>

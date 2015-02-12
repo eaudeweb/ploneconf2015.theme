@@ -1,0 +1,28 @@
+<object name="portal_skins">
+
+  <object
+    name="ploneconf2015_theme"
+    meta_type="Filesystem Directory View"
+    directory="ploneconf2015.theme:skins/ploneconf2015_theme"
+    />
+
+  <skin-path
+    name="PloneConf2015 Theme"
+    based-on="Sunburst Theme">
+
+    <layer
+      name="ploneconf2015_theme"
+      insert-after="custom"
+      />
+
+  </skin-path>
+
+  <skin-path
+    name="*">
+      <layer
+        name="ploneconf2015_theme"
+        insert-after="custom"
+        />
+  </skin-path>
+
+</object>

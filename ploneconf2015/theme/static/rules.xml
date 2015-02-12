@@ -1,90 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules
-    xmlns="http://namespaces.plone.org/diazo"
-    xmlns:css="http://namespaces.plone.org/diazo/css"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <!-- Front page -->
-    <rules>
-        <theme href="second.html"/>
-        <theme href="index.html" css:if-content="body.section-front-page #visual-portal-wrapper"/>
-        <notheme css:if-content="body.userrole-authenticated" />
+  <!-- Front page -->
+  <rules>
+    <notheme css:if-not-content="body.userrole-anonymous"/>
+    <theme href="second.html"/>
+    <theme href="index.html" css:if-content="body.section-front-page #visual-portal-wrapper"/>
 
-        <replace css:theme="html head title" css:content="html head title" />
-
-        <before css:theme-children="html head" css:content="html head base" />
-        <merge attributes="class" css:theme="body" css:content="body" />
-
-              <!-- Schedule portlet -->
-        <copy attributes="href" css:theme="#schedule a.training" css:content="a.schedule-training" />
-        <copy attributes="href" css:theme="#schedule a.conference" css:content="a.schedule-conference" />
-        <copy attributes="href" css:theme="#schedule a.sprints" css:content="a.schedule-sprints" />
-        <copy attributes="href" css:theme="#schedule a.full" css:content="a.schedule-full" />
-
-        <!-- Location portlet -->
-        <copy attributes="href" css:theme="#location-photos" css:content="a.location-photos" />
-        <copy attributes="href" css:theme="#location a.map" css:content="a.location-map" />
-        <copy attributes="href" css:theme="#location a.to-do" css:content="a.location-to-do" />
-        <copy attributes="href" css:theme="#location a.directions" css:content="a.location-directions" />
-
-        <!-- Sponsorship -->
-        <copy attributes="href" css:theme="#sponsors a.btn" css:content="a.sponsorship" />
-
-        <!-- Footer -->
-        <copy attributes="href" css:theme="#footer a.schedule" css:content="a.footer-schedule" />
-        <copy attributes="href" css:theme="#footer a.training" css:content="a.footer-training" />
-        <copy attributes="href" css:theme="#footer a.location" css:content="a.footer-location" />
-        <copy attributes="href" css:theme="#footer a.submit-talk" css:content="a.footer-submit-talk" />
-
-        !-- Site title -->
-        <replace css:theme="a.navbar-brand">
-          <xsl:element name='a'>
-            <xsl:attribute name="class">
-              navbar-brand
-            </xsl:attribute>
-            <xsl:attribute name="href">
-              <xsl:value-of select="$portal_url" />
-            </xsl:attribute>
-            <xsl:value-of select="$portal_title" />
-          </xsl:element>
-        </replace>
-
-        <!-- Global nav -->
-        <replace css:theme-children="ul.navbar-right">
-              <xsl:for-each css:select="#portal-globalnav li">
-                    <xsl:element name='li'>
-                        <xsl:attribute name="id">
-                            <xsl:value-of select="@id" />
-                        </xsl:attribute>
-                        <xsl:attribute name="class">
-                            <xsl:value-of select="@class" />
-                        </xsl:attribute>
-                        <xsl:copy-of select="./*"/>
-                    </xsl:element>
-              </xsl:for-each>
-          </replace>
-
-      <!-- Navigation portlet -->
-        <replace css:theme-children="ul.nav-stacked">
-              <xsl:for-each css:select="dl.portletNavigationTree ul li">
-                    <xsl:element name='li'>
-                        <xsl:attribute name="id">
-                            <xsl:value-of select="@id" />
-                        </xsl:attribute>
-                        <xsl:attribute name="class">
-                            <xsl:value-of select="@class" />
-                        </xsl:attribute>
-                        <xsl:copy-of select="./*"/>
-                    </xsl:element>
-              </xsl:for-each>
-          </replace>
-
-        <copy attributes="href" css:theme="a.tickets" css:content="a.tickets-buy" />
-
-        <!-- Content -->
-        <replace css:theme-children=".col-sm-9" css:content-children="#content" />
-
-
+    <rules css:if-content="body.userrole-anonymous">
+      <xi:include href="rules/head.xml" />
+      <xi:include href="rules/title.xml" />
+      <xi:include href="rules/navigation.xml" />
+      <xi:include href="rules/forms.xml" />
+      <xi:include href="rules/front.xml"/>
+      <xi:include href="rules/content.xml"/>
     </rules>
+
+  </rules>
 
 </rules>
