@@ -7636,6 +7636,10 @@ section:last-child {
 .update-icons li {
   margin: 0 28px;
   max-width: 180px;
+  overflow: hidden;
+}
+.update-icons a {
+  height: 2.4em;
 }
 #footer .btn-success {
   width: 100%;
