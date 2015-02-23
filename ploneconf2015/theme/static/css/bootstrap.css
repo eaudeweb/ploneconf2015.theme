@@ -7836,6 +7836,13 @@ hr {
   display: inline-block;
   margin-bottom: 0;
 }
+.sponsors .placeholder {
+  line-height: 1;
+  border-style: dashed;
+}
+.sponsors .placeholder:hover {
+  border-style: solid;
+}
 .sponsors img {
   display: block;
   height: 60px;
