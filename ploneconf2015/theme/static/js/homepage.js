@@ -1,19 +1,30 @@
 $(document).ready(function() {
+  if ($(window).width() > 768) {
+    backgroundOffset = -48;
+    furthestOffset = -36;
+    furtherOffset = -24;
+    farOffset = -12;
+  } else {
+    backgroundOffset = -24;
+    furthestOffset = -18;
+    furtherOffset = -12;
+    farOffset = -6;
+  }
   // init controller
   controller = new ScrollMagic();
 
   var tween_cityscape = new TimelineMax()
       .add([TweenMax.fromTo("#background", 0.5,
-              { top: -48 },
+              { top: backgroundOffset },
               { top: 0 }),
             TweenMax.fromTo("#furthest", 0.5,
-              { top: -36 },
+              { top: furthestOffset },
               { top: 0 }),
             TweenMax.fromTo("#further", 0.5,
-              { top: -24 },
+              { top: furtherOffset },
               { top: 0 }),
             TweenMax.fromTo("#far", 0.5,
-              { top: -12 },
+              { top: farOffset },
               { top: 0 })
            ], "+=0", "start");
 
