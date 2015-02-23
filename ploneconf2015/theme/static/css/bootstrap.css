@@ -7910,4 +7910,9 @@ hr {
 #map-canvas {
   min-height: 450px;
 }
+.navbar .btn-block {
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*# sourceMappingURL=bootstrap.css.map */
