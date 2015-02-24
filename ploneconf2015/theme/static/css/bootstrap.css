@@ -7839,6 +7839,9 @@ hr {
 .sponsors .placeholder {
   line-height: 1;
   border-style: dashed;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 72px;
 }
 .sponsors .placeholder:hover {
   border-style: solid;
