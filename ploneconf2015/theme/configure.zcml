@@ -5,15 +5,15 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:cmf="http://namespaces.zope.org/cmf"
-    i18n_domain="diazotheme.test">
+    i18n_domain="ploneconf2015">
 
   <i18n:registerTranslations directory="locales" />
 
   <genericsetup:registerProfile
       name="default"
-      title="Diazo Theme for Plone Conf 2015"
+      title="Plone Conf 2015 Diazo Theme"
       directory="profiles/default"
-      description="Extension profile for Diazo Theme for Plone Conf 2015"
+      description="Plone Conf 2015 Diazo Theme"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
