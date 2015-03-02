@@ -12,6 +12,6 @@
   </after>
   <merge attributes="class" css:theme="body" css:content="body" />
 
-  <after css:theme="script:last-of-type" css:content="#google-analytics" />
+  <after css:theme="script:last-of-type" css:content-children="#google-analytics" />
 
 </rules>
