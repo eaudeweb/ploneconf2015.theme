@@ -5099,7 +5099,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 28px;
+  margin-bottom: 0;
   border-bottom: 2px solid transparent;
 }
 @media (max-width: 899px) {
@@ -7553,8 +7553,10 @@ button.close {
   }
 }
 section {
-  padding: 60px 0;
+  padding: 30px 0;
+  border-top: 1px solid #f76a52;
   border-bottom: 1px solid #f76a52;
+  margin-top: -1px;
 }
 section h2 {
   font-family: inherit;
@@ -7564,7 +7566,7 @@ section h2 {
   margin-top: 28px;
   margin-bottom: 14px;
   font-size: 41px;
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: 30px;
 }
 section h2 small,
