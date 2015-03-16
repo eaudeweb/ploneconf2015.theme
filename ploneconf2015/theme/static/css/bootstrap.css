@@ -2256,9 +2256,10 @@ a.bg-danger:hover {
   background-color: #d4420e;
 }
 .page-header {
-  padding-bottom: 13px;
-  margin: 56px 0 28px;
-  border-bottom: 1px solid #f76a52;
+  background: #f76a52;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  margin: -2px 0 28px;
+  padding: 6px 12px;
 }
 ul,
 ol {
@@ -8037,5 +8038,9 @@ strong {
   width: 100%;
   overflow: auto;
   border: 1px solid #f76a52;
+}
+#plone-content section:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
 /*# sourceMappingURL=bootstrap.css.map */
