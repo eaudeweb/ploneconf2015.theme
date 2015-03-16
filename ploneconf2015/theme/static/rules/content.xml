@@ -5,7 +5,7 @@
 
   <drop css:theme="#plone-left" css:if-not-content="#portal-column-one"/>
 
-  <replace css:theme-children=".page-header .container" css:content-children=".documentFirstHeading" />
+  <replace css:theme-children=".page-header" css:content-children=".documentFirstHeading" />
   <replace css:theme-children="#plone-content" css:content-children="#content-core" />
 
 </rules>
