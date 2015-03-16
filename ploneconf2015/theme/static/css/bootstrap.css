@@ -2258,8 +2258,19 @@ a.bg-danger:hover {
 .page-header {
   background: #f76a52;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  margin: -2px 0 28px;
+  margin: 6px 0 28px;
   padding: 6px 12px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 3px rgba(247, 106, 82, 0.5);
+}
+@media (max-width: 991px) {
+  .page-header {
+    border-radius: 0;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 ul,
 ol {
@@ -8042,5 +8053,8 @@ strong {
 #plone-content section:first-child {
   padding-top: 0;
   border-top: 0;
+}
+.navbar-no-border {
+  border-bottom: 0!important;
 }
 /*# sourceMappingURL=bootstrap.css.map */
