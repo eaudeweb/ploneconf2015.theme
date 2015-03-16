@@ -3,6 +3,9 @@ var geocoder;
 
 function initialize() {
 	var mapContainer = $('#map-canvas');
+  if(!mapContainer.length){
+    return;
+  }
 	var address = mapContainer.data('address');
 	var icon = '../img/map-marker.png';
 
