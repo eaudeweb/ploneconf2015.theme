@@ -30,7 +30,6 @@
 
   <!-- Temporary disable links -->
   <drop css:theme="#plone-buy-tickets-footer" />
-  <drop css:theme="#sponsors div" />
   <drop css:theme="#schedule .full" />
 
 </rules>
