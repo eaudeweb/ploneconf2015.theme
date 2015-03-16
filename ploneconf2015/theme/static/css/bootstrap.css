@@ -8026,19 +8026,23 @@ strong {
   font-weight: normal;
 }
 .sponsorship-packages .gold-col {
-  background-color: #FFB205;
-  border-top-color: #eba200;
-  border-bottom-color: #eba200;
+  background-color: #FFCE0D;
+  border-top-color: #f3c100;
+  border-bottom-color: #f3c100;
+  color: #222;
+  text-shadow: none;
 }
 .sponsorship-packages .silver-col {
   background-color: #CAC8C2;
   border-top-color: #bebcb4;
   border-bottom-color: #bebcb4;
+  color: #444;
+  text-shadow: none;
 }
 .sponsorship-packages .bronze-col {
-  background-color: #A15616;
-  border-top-color: #8b4a13;
-  border-bottom-color: #8b4a13;
+  background-color: #D38711;
+  border-top-color: #bb780f;
+  border-bottom-color: #bb780f;
 }
 .sponsorship-packages .supporting-col {
   background-color: #AF1E59;
