@@ -7,7 +7,6 @@ function initialize() {
     return;
   }
 	var address = mapContainer.data('address');
-	var icon = '../img/map-marker.png';
 
 	map = new google.maps.Map(mapContainer[0], {
 		zoom: 16,
@@ -18,13 +17,13 @@ function initialize() {
         "featureType":"water",
         "elementType":"geometry",
         "stylers": [{
-          "color":"#3F2045"}]
+          "color":"#75B6CA"}]
       },
       {
         "featureType":"landscape",
         "elementType":"geometry",
         "stylers": [{
-          "color":"#3F2045"}]
+          "color":"#38133f"}]
       },
       {
         "featureType":"poi",
@@ -41,13 +40,13 @@ function initialize() {
         "featureType":"road.arterial",
         "elementType":"geometry",
         "stylers": [{
-          "color":"#AF1E59"}]
+          "color":"#f76a52"}]
       },
       {
         "featureType":"road.local",
         "elementType":"geometry",
         "stylers": [{
-          "color":"#F76A52"}]
+          "color":"#4F3D59"}]
 
       },
       {
@@ -58,7 +57,8 @@ function initialize() {
       {
         "elementType":"labels.text.stroke",
         "stylers": [{
-          "visibility":"off"}]
+          "color":"#3F2045",
+          "opacity": ".2" }]
       },
       {
         "featureType":"transit",
@@ -81,16 +81,10 @@ function initialize() {
         "featureType":"road",
         "elementType":"geometry.stroke",
         "stylers": [{
-          "color":"#F15A24"}, {
-          "lightness":-25}]
-        }]
+          "visibility": "off"}]
+      }]
 	});
 
-	var marker = new google.maps.Marker({
-    position: map.getCenter(),
-    icon: icon,
-    map: map
-  });
 }
 function codeAddress(address) {
   geocoder = new google.maps.Geocoder();
@@ -99,7 +93,9 @@ function codeAddress(address) {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
           map: map,
-          position: results[0].geometry.location
+          icon: 'img/map-marker.png',
+          position: results[0].geometry.location,
+          title: 'Intercontinental'
       });
     } else {
       alert("Geocode was not successful for the following reason: " + status);

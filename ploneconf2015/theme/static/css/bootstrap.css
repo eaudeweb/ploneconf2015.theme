@@ -7939,6 +7939,9 @@ hr {
 }
 #map-canvas {
   min-height: 450px;
+  margin-bottom: 28px;
+  border-radius: 5px;
+  border: 1px solid #f76a52;
 }
 .navbar .btn-block {
   max-width: 240px;
@@ -8053,6 +8056,7 @@ strong {
   width: 100%;
   overflow: auto;
   border: 1px solid #f76a52;
+  margin-bottom: 28px;
 }
 #plone-content section:first-child {
   padding-top: 0;
