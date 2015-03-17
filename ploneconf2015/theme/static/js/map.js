@@ -9,7 +9,7 @@ function initialize() {
 	var address = mapContainer.data('address');
 
 	map = new google.maps.Map(mapContainer[0], {
-		zoom: 16,
+		zoom: 17,
 		scrollwheel: false,
 		center: codeAddress(address),
 		styles: [
@@ -93,7 +93,7 @@ function codeAddress(address) {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
           map: map,
-          icon: 'img/map-marker.png',
+          icon: '../img/map-marker.png',
           position: results[0].geometry.location,
           title: 'Intercontinental'
       });
