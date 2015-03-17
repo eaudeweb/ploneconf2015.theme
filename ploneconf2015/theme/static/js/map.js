@@ -93,7 +93,7 @@ function codeAddress(address) {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
           map: map,
-          icon: '../img/map-marker.png',
+          icon: '/++theme++ploneconf2015.theme//img/map-marker.png',
           position: results[0].geometry.location,
           title: 'Intercontinental'
       });
