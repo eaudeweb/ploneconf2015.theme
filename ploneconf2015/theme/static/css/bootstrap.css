@@ -7625,7 +7625,7 @@ section:last-child {
 }
 #updates img {
   width: 80px;
-  height: auto;
+  height: 80px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -7682,6 +7682,7 @@ section:last-child {
 }
 .parallax img {
   display: block;
+  width: 100%;
 }
 .parallax .layer-0 {
   position: relative;
@@ -7775,6 +7776,7 @@ section:last-child {
 .logo {
   display: block;
   max-width: 600px;
+  width: 100%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
