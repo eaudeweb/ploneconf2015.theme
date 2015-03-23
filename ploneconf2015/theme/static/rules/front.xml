@@ -23,6 +23,7 @@
   <copy attributes="href" css:theme="#footer a.training" css:content="a.footer-training" />
   <copy attributes="href" css:theme="#footer a.location" css:content="a.footer-location" />
   <copy attributes="href" css:theme="#footer a.submit-talk" css:content="a.footer-submit-talk" />
+  <copy attributes="href" css:theme="#footer a.terms-and-conditions" css:content="a.terms-and-conditions" />
 
   <!-- Buy ticket -->
   <copy attributes="href" css:theme="#plone-buy-tickets-header" css:content="a.tickets-buy" />
