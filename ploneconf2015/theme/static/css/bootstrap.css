@@ -3143,11 +3143,11 @@ th {
   padding: 8px;
   line-height: 1.8;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #5b1f66;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #5b1f66;
 }
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
@@ -3158,7 +3158,7 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #5b1f66;
 }
 .table .table {
   background-color: #38133f;
@@ -3172,7 +3172,7 @@ th {
   padding: 5px;
 }
 .table-bordered {
-  border: 1px solid #dddddd;
+  border: 1px solid #5b1f66;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -3180,7 +3180,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 1px solid #5b1f66;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
@@ -3318,7 +3318,7 @@ table th[class*="col-"] {
     margin-bottom: 21px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #dddddd;
+    border: 1px solid #5b1f66;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -8066,5 +8066,30 @@ strong {
 }
 .navbar-no-border {
   border-bottom: 0!important;
+}
+[data-stars]:before,
+[data-stars]:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffb205;
+}
+[data-stars="1"]:after {
+  content: "\f005";
+}
+[data-stars="2"]:after {
+  content: "\f005\f005";
+}
+[data-stars="3"]:after {
+  content: "\f005\f005\f005";
+}
+[data-stars="4"]:after {
+  content: "\f005\f005\f005\f005";
+}
+[data-stars="5"]:after {
+  content: "\f005\f005\f005\f005\f005";
 }
 /*# sourceMappingURL=bootstrap.css.map */
