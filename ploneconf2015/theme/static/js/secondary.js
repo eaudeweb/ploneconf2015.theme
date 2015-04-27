@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var hash = window.location.hash;
-  if(!hash || !$(window).scrollTop()){
+  if(!hash && !$(window).scrollTop()){
     hash = '#navbar';
     var el = $('body').find(hash);
     window.setTimeout(function() {
