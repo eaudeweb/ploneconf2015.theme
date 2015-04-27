@@ -1,13 +1,13 @@
 $(document).ready(function() {
   var hash = window.location.hash;
-  if(!hash){
+  if(!hash || !$(window).scrollTop()){
     hash = '#navbar';
+    var el = $('body').find(hash);
+    window.setTimeout(function() {
+      $('html, body').animate({
+          scrollTop: el.offset().top
+      }, 500);
+    }, 300);
   }
-  var el = $('body').find(hash);
 
-  window.setTimeout(function() {
-    $('html, body').animate({
-        scrollTop: el.offset().top
-    }, 500);
-  }, 300);
 });
