@@ -28,4 +28,23 @@ form select {
   color: #333333;
 }
 
+#plone-content .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f76a52;
+}
+
+.ploneconf-tickets {
+  position: relative;
+}
+
+.ploneconf-tickets .cart-summary {
+  position: absolute;
+  right: 0;
+  top: -5.5em;
+  min-width: 200px
+}
+
+.ploneconf-tickets #quantity {
+  display: none;
+}
+
 /* </dtml-with> */
