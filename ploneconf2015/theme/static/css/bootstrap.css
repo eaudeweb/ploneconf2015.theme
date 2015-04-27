@@ -2250,10 +2250,10 @@ a.bg-warning:hover {
   background-color: #d19100;
 }
 .bg-danger {
-  background-color: #f15a24;
+  background-color: #af1e59;
 }
 a.bg-danger:hover {
-  background-color: #d4420e;
+  background-color: #831743;
 }
 .page-header {
   background: #f76a52;
@@ -3299,14 +3299,14 @@ table th[class*="col-"] {
 .table > thead > tr.danger > th,
 .table > tbody > tr.danger > th,
 .table > tfoot > tr.danger > th {
-  background-color: #f15a24;
+  background-color: #af1e59;
 }
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover,
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
-  background-color: #ec490f;
+  background-color: #991a4e;
 }
 .table-responsive {
   overflow-x: auto;
@@ -3754,7 +3754,7 @@ select[multiple].form-group-lg .form-control {
 .has-error .input-group-addon {
   color: #ffffff;
   border-color: #ffffff;
-  background-color: #f15a24;
+  background-color: #af1e59;
 }
 .has-error .form-control-feedback {
   color: #ffffff;
@@ -6007,7 +6007,7 @@ a.thumbnail.active {
   color: inherit;
 }
 .alert-danger {
-  background-color: #f15a24;
+  background-color: #af1e59;
   color: #ffffff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
@@ -6289,7 +6289,7 @@ a.list-group-item-warning.active:focus {
 }
 .list-group-item-danger {
   color: #ffffff;
-  background-color: #f15a24;
+  background-color: #af1e59;
 }
 a.list-group-item-danger {
   color: #ffffff;
@@ -6300,7 +6300,7 @@ a.list-group-item-danger .list-group-item-heading {
 a.list-group-item-danger:hover,
 a.list-group-item-danger:focus {
   color: #ffffff;
-  background-color: #ec490f;
+  background-color: #991a4e;
 }
 a.list-group-item-danger.active,
 a.list-group-item-danger.active:hover,
@@ -6540,14 +6540,14 @@ a.list-group-item-danger.active:focus {
 }
 .panel-danger > .panel-heading {
   color: #ffffff;
-  background-color: #f15a24;
+  background-color: #af1e59;
   border-color: transparent;
 }
 .panel-danger > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: transparent;
 }
 .panel-danger > .panel-heading .badge {
-  color: #f15a24;
+  color: #af1e59;
   background-color: #ffffff;
 }
 .panel-danger > .panel-footer + .panel-collapse > .panel-body {
@@ -8091,5 +8091,8 @@ strong {
 }
 [data-stars="5"]:after {
   content: "\f005\f005\f005\f005\f005";
+}
+.input-align {
+  padding: 7px 0;
 }
 /*# sourceMappingURL=bootstrap.css.map */
