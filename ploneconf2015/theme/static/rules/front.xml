@@ -16,6 +16,9 @@
   <copy attributes="href" css:theme="#location a.directions" css:content="a.location-directions" />
   <copy attributes="href" css:theme="#location a.accomodation" css:content="a.location-accomodation" />
 
+  <!-- Volunteer -->
+  <copy attributes="href" css:theme="#volunteer .volunteer" css:content="a.volunteer" />
+
   <!-- Sponsorship -->
   <copy attributes="href" css:theme="#sponsors a.btn" css:content="a.sponsorship" />
 
