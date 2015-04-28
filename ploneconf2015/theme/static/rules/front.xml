@@ -30,11 +30,9 @@
   <copy attributes="href" css:theme="#footer a.terms-and-conditions" css:content="a.terms-and-conditions" />
 
   <!-- Buy ticket -->
-  <copy attributes="href" css:theme="#plone-buy-tickets-header" css:content="a.tickets-buy" />
-  <copy attributes="href" css:theme="#plone-buy-tickets-footer" css:content="a.tickets-buy" />
+  <copy attributes="href" css:theme="#plone-buy-tickets-footer" css:content="#portaltab-buy_ticket a" />
 
   <!-- Temporary disable links -->
-  <drop css:theme="#plone-buy-tickets-footer" />
   <drop css:theme="#schedule .full" />
 
 </rules>
