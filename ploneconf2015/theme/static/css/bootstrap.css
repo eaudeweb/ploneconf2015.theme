@@ -7874,6 +7874,15 @@ hr {
   display: inline-block;
   vertical-align: middle;
 }
+.sponsors .plone-gold + dd img {
+  height: 96px;
+}
+.sponsors .plone-silver + dd img {
+  height: 84px;
+}
+.sponsors .plone-bronze + dd img {
+  height: 72px;
+}
 .sponsors .btn {
   margin: 6px auto;
 }
