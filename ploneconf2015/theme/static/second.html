@@ -26,7 +26,7 @@
 
   <div class="container">
     <div id="navbar" class="navbar navbar-default navbar-no-border">
-      <div class="navbar-header">
+      <!-- <div class="navbar-header">
         <button type="button"
                 class="navbar-toggle"
                 data-toggle="collapse"
@@ -34,13 +34,26 @@
           <span class="fa fa-bars"></span>
         </button>
         <a class="navbar-brand" href="#">Plone Conf. Bucharest 2015</a>
-      </div>
+      </div> -->
 
       <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Schedule</a></li>
+        <ul class="nav navbar-nav">
+          <!-- <li><a href="#">Schedule</a></li> -->
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="#">Location</a>
+            <ul class="dropdown-menu">
+              <li><a href="">The Venue</a></li>
+              <li><a href="">From the airport</a></li>
+              <li><a href="">Accomodation</a></li>
+              <li><a href="">Things to do</a></li>
+            </ul>
+          </li>
           <li><a href="#">Training</a></li>
-          <li><a href="#">Location</a></li>
+          <li><a href="#">Sprints</a></li>
+          <li><a href="#">Sponsorship</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
           <li>
             <a class="btn btn-outline btn-block btn-rounded">Submit talk</a>
           </li>
