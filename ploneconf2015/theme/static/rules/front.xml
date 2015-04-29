@@ -14,7 +14,7 @@
   <copy attributes="href" css:theme="#location a.map" css:content="a.location-map" />
   <copy attributes="href" css:theme="#location a.to-do" css:content="a.location-to-do" />
   <copy attributes="href" css:theme="#location a.directions" css:content="a.location-directions" />
-  <copy attributes="href" css:theme="#location a.accomodation" css:content="a.location-accomodation" />
+  <copy attributes="href" css:theme="#location a.accommodation" css:content="a.location-accommodation" />
 
   <!-- Volunteer -->
   <copy attributes="href" css:theme="#volunteer .volunteer" css:content="a.volunteer" />
