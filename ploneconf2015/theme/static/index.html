@@ -25,31 +25,28 @@
   </div>
 
   <div class="container">
-    <div id="navbar" class="navbar navbar-default">
-      <div class="navbar-header">
-        <button type="button"
-                class="navbar-toggle"
-                data-toggle="collapse"
-                data-target=".navbar-collapse">
-          <span class="fa fa-bars"></span>
-        </button>
-        <a class="navbar-brand" href="#">Plone Conf. Bucharest 2015</a>
-      </div>
-
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Schedule</a></li>
-          <li><a href="#">Training</a></li>
-          <li><a href="#">Location</a></li>
-          <li>
-            <a class="btn btn-outline btn-block btn-rounded">Submit talk</a>
-          </li>
-          <li id="plone-buy-tickets-header">
-            <a class="btn btn-success btn-block btn-rounded">Buy your tickets</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <nav class="navbar">
+      <a class="navbar-brand" href="/">Plone Conf. Bucharest 2015</a>
+      <ul class="navbar-menu">
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Training</a></li>
+        <li class="navbar-dropdown">
+          <a href="#">Location <span class="fa fa-caret-down"></span></a>
+          <ul class="navbar-dropdown-menu">
+            <li><a href="">The Venue</a></li>
+            <li><a href="">From the airport</a></li>
+            <li><a href="">Accomodation</a></li>
+            <li><a href="">Things to do</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="btn btn-outline btn-block btn-rounded">Submit talk</a>
+        </li>
+        <li id="plone-buy-tickets-header">
+          <a class="btn btn-success btn-block btn-rounded">Buy your tickets</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 
 
@@ -268,7 +265,9 @@
         </dd>
         <dt id="plone-gold">Bronze sponsors</dt>
         <dd>
-          <a href="http://www.netsight.co.uk/">
+          <a href="http://www.netsight.co.uk/" rel="nofollow"
+             title="Netsight"
+             class="thumbnail">
             <img src="img/logo-netsight.png">
           </a>
         </dd>
