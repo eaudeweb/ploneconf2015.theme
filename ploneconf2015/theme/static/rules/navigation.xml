@@ -4,8 +4,11 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://namespaces.plone.org/diazo">
 
+  <!-- XXX Temporary fix -->
+  <drop css:theme="ul.plone-globalnav-left" />
+
   <!-- Global nav -->
-  <replace css:theme-children="ul.navbar-right">
+  <replace css:theme-children="ul.plone-globalnav-right">
     <xsl:for-each css:select="#portal-globalnav li">
       <xsl:element name='li'>
         <xsl:attribute name="id">
