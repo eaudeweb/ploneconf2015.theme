@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css">
+
+  <!-- Volunteer -->
+  <replace css:theme="#volunteer" css:content="#volunteer" />
+
+  <!-- Sponsorship -->
+  <copy attributes="href" css:theme="#sponsors a.btn" css:content="a.sponsorship" />
+
+  <!-- Footer -->
+  <replace css:theme="#footer" css:content="#footer" />
+
+</rules>
