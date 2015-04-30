@@ -1,40 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rules
-  xmlns:css="http://namespaces.plone.org/diazo/css"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns="http://namespaces.plone.org/diazo">
-
-  <!-- XXX Temporary fix -->
-  <drop css:theme="ul.plone-globalnav-left" />
+<rules xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css">
 
   <!-- Global nav -->
-  <replace css:theme-children="ul.plone-globalnav-right">
-    <xsl:for-each css:select="#portal-globalnav li">
-      <xsl:element name='li'>
-        <xsl:attribute name="id">
-          <xsl:value-of select="@id"/>
-        </xsl:attribute>
-        <xsl:attribute name="class">
-          <xsl:value-of select="@class"/>
-        </xsl:attribute>
-        <xsl:copy-of select="./*"/>
-      </xsl:element>
-    </xsl:for-each>
-  </replace>
-
-  <!-- Navigation left portlet -->
-  <replace css:theme-children="ul.nav-stacked">
-    <xsl:for-each css:select="dl.portletNavigationTree ul li">
-      <xsl:element name='li'>
-        <xsl:attribute name="id">
-          <xsl:value-of select="@id"/>
-        </xsl:attribute>
-        <xsl:attribute name="class">
-          <xsl:value-of select="@class"/>
-        </xsl:attribute>
-        <xsl:copy-of select="./*"/>
-      </xsl:element>
-    </xsl:for-each>
-  </replace>
+  <replace css:theme-children="ul.plone-globalnav-left" css:content-children="ul.plone-globalnav-left" />
+  <replace css:theme-children="ul.plone-globalnav-right" css:content-children="ul.plone-globalnav-right" />
 
 </rules>
