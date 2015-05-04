@@ -15,8 +15,8 @@
       <xi:include href="rules/title.xml" />
       <xi:include href="rules/navigation.xml" />
       <xi:include href="rules/forms.xml" />
-      <xi:include href="rules/front.xml"/>
       <xi:include href="rules/content.xml"/>
+      <xi:include href="rules/footer.xml"/>
     </rules>
 
   </rules>
