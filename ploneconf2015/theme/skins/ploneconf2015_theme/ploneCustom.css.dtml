@@ -47,4 +47,14 @@ form select {
   display: none;
 }
 
+span.required {
+  color: red;
+}
+
+span.required:after {
+  content: "■";
+  color: #f76a52;
+  padding-left: 0.2em;
+}
+
 /* </dtml-with> */
