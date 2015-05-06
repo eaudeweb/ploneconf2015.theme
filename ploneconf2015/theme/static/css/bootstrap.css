@@ -7572,11 +7572,6 @@ section:last-child {
 #updates {
   text-align: center;
 }
-
-#plone-content #schedule {
-  padding-top: 30px;
-}
-
 #updates form {
   max-width: 40em;
   display: block;
@@ -7879,13 +7874,13 @@ hr {
   display: inline-block;
   vertical-align: middle;
 }
-.sponsors .plone-gold + dd img {
+.sponsors #plone-gold + dd img {
   height: 96px;
 }
-.sponsors .plone-silver + dd img {
+.sponsors #plone-silver + dd img {
   height: 84px;
 }
-.sponsors .plone-bronze + dd img {
+.sponsors #plone-bronze + dd img {
   height: 72px;
 }
 .sponsors .btn {
@@ -7913,7 +7908,7 @@ hr {
 }
 .sponsors img {
   display: block;
-  height: 60px;
+  height: 48px;
   width: auto;
 }
 .block {
