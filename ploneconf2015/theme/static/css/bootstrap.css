@@ -7523,43 +7523,38 @@ button.close {
     display: none !important;
   }
 }
+/* Sprite Graffiti by Fontfabric (www.fontfabric.com) */
+@font-face {
+  font-family: 'Sprite Graffiti';
+  src: url('../fonts/sprite_graffiti.eot');
+  src: url('../fonts/sprite_graffiti.eot?#iefix') format('embedded-opentype'), url('../fonts/sprite_graffiti.woff') format('woff'), url('../fonts/sprite_graffiti.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 section {
+  margin-top: -1px;
   padding: 30px 0;
   border-top: 1px solid #f76a52;
   border-bottom: 1px solid #f76a52;
-  margin-top: -1px;
-}
-section h2 {
-  font-family: inherit;
-  font-weight: 300;
-  line-height: 1.4;
-  color: #ffffff;
-  margin-top: 28px;
-  margin-bottom: 14px;
-  font-size: 41px;
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-section h2 small,
-section h2 .small {
-  font-weight: normal;
-  line-height: 1;
-  color: #af1e59;
-}
-section h2 small,
-section h2 .small {
-  font-size: 65%;
-}
-section h2:before {
-  color: #f76a52;
-  content: "<";
-}
-section h2:after {
-  color: #f76a52;
-  content: "/>";
 }
 section:last-child {
   border-bottom: 0;
+}
+section h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: 'Sprite Graffiti', "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 0 0 3px #f15a24;
+}
+section h2:before,
+section h2:after {
+  color: #f15a24;
+  content: "=";
+}
+#plone-content section:first-child {
+  border-top: 0;
 }
 @media (max-width: 991px) {
   #location {
@@ -8052,10 +8047,6 @@ strong {
   overflow: auto;
   border: 1px solid #f76a52;
   margin-bottom: 28px;
-}
-#plone-content section:first-child {
-  padding-top: 0;
-  border-top: 0;
 }
 .navbar-no-border {
   border-bottom: 0!important;
