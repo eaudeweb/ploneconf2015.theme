@@ -37,10 +37,10 @@ form select {
 }
 
 .ploneconf-tickets .cart-summary {
-  position: absolute;
-  right: 0;
+  min-width: 150px;
+  position: relative;
   top: -5.5em;
-  min-width: 200px
+  right: 1em;
 }
 
 .ploneconf-tickets #quantity {
