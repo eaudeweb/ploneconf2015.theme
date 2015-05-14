@@ -8071,6 +8071,7 @@ strong {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f0d7";
-  margin-left: .5em;
+  width: 1em;
+  text-align: center;
 }
 /*# sourceMappingURL=bootstrap.css.map */
