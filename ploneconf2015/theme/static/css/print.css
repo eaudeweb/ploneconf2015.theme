@@ -6,6 +6,14 @@
   display: none !important;
 }
 
+#order dl {
+  margin: 0;
+}
+
+#order dd {
+  margin-bottom: 1em;
+}
+
 .order {
   font-family: "Helvetica Neue", Arial, FreeSans, sans-serif! important;
 }
@@ -39,4 +47,8 @@
 
 .order .ticket div {
    width: 70%;
+}
+
+.invoice .vat {
+  min-width: 125px;
 }
