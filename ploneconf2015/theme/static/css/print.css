@@ -1,0 +1,54 @@
+#header,
+#footer,
+#sponsors,
+#navbar,
+.page-header {
+  display: none !important;
+}
+
+#order dl {
+  margin: 0;
+}
+
+#order dd {
+  margin-bottom: 1em;
+}
+
+.order {
+  font-family: "Helvetica Neue", Arial, FreeSans, sans-serif! important;
+}
+
+.order section.ticket {
+  page-break-before:always;
+}
+
+.order .invoice .row {
+  min-height: 200px;
+}
+
+.order a {
+  color: #428bca;
+  text-decoration: none;
+  border: none;
+}
+
+.order h1 {
+  margin-bottom: 2em;
+}
+
+.order .tickets dt, .order .tickets dd {
+  padding: .5em 0;
+}
+
+.order dt.organizer,
+.order dd.organizer {
+  margin-top: 2em;
+}
+
+.order .ticket div {
+   width: 70%;
+}
+
+.invoice .vat {
+  min-width: 125px;
+}
