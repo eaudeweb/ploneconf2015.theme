@@ -18,8 +18,16 @@
   font-family: "Helvetica Neue", Arial, FreeSans, sans-serif! important;
 }
 
+.order .invoice {
+  page-break-after: always;
+}
+
 .order section.ticket {
-  page-break-before:always;
+  page-break-after: always;
+}
+
+.order section.ticket:last-child {
+  page-break-after: auto;
 }
 
 .order .invoice .row {
@@ -50,5 +58,5 @@
 }
 
 .invoice .vat {
-  min-width: 125px;
+  min-width: 100px;
 }
