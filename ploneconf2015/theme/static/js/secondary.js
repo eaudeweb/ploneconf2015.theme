@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  if ($('.section-front-page').length) {
+    return;
+  }
   var hash = window.location.hash;
   if(!hash && !$(window).scrollTop()){
     hash = '#navbar';
@@ -9,5 +12,4 @@ $(document).ready(function() {
       }, 500);
     }, 300);
   }
-
 });
