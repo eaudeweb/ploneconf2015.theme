@@ -1,6 +1,14 @@
 var map;
 var geocoder;
 
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+      '?key=AIzaSyCgzwlVgB2yRIIW89qbpi9dAiWlD1DAjy0' +
+      '&callback=initialize';
+  document.body.appendChild(script);
+}
 function initialize() {
   var mapContainer = $('#map-canvas');
   if(!mapContainer.length){
@@ -84,7 +92,6 @@ function initialize() {
           "visibility": "off"}]
       }]
   });
-
 }
 function codeAddress(address) {
   geocoder = new google.maps.Geocoder();
@@ -177,5 +184,5 @@ $(document).ready(function() {
 
   // ***********************************************
   // Initialize map on venue page // previous map.js
-  initialize();
+  loadScript();
 });
