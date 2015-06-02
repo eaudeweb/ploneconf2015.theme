@@ -7,8 +7,7 @@
   <!-- Front page -->
   <rules>
     <notheme css:if-not-content="body.userrole-anonymous"/>
-    <theme href="second.html"/>
-    <theme href="index.html" css:if-content="body.section-front-page #visual-portal-wrapper"/>
+    <theme href="index.html"/>
 
     <rules css:if-content="body.userrole-anonymous">
       <xi:include href="rules/head.xml" />
