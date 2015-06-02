@@ -7730,10 +7730,13 @@ section h2:after {
 .logo {
   display: block;
   max-width: 600px;
-  width: 100%;
-  height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .sponsorship-packages {
   table-layout: fixed;
