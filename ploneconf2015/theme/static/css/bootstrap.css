@@ -2256,21 +2256,14 @@ a.bg-danger:hover {
   background-color: #831743;
 }
 .page-header {
-  background: #f76a52;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  margin: 6px 0 28px;
-  padding: 6px 12px;
-  border-radius: 5px;
-  box-shadow: 0 0 0 3px rgba(247, 106, 82, 0.5);
+  margin-top: 0;
+  color: #f76a52;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid;
 }
-@media (max-width: 991px) {
-  .page-header {
-    border-radius: 0;
-    margin-left: -12px;
-    margin-right: -12px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
+.section-front-page .page-header {
+  display: none;
 }
 ul,
 ol {
@@ -7710,6 +7703,53 @@ section h2:after {
 .update-icons a {
   height: 2.4em;
 }
+.sponsors dt {
+  display: block;
+  font-weight: normal;
+  color: #f76a52;
+  white-space: nowrap;
+}
+.sponsors dd {
+  display: inline-block;
+  vertical-align: middle;
+}
+.sponsors #plone-gold + dd img {
+  height: 96px;
+}
+.sponsors #plone-silver + dd img {
+  height: 84px;
+}
+.sponsors #plone-bronze + dd img {
+  height: 72px;
+}
+.sponsors .btn {
+  margin: 6px auto;
+}
+.sponsors .btn-outline {
+  line-height: 19.2px;
+}
+.sponsors .thumbnail {
+  border-color: transparent;
+}
+.sponsors a {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.sponsors .placeholder {
+  line-height: 1;
+  border-style: dashed;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 72px;
+}
+.sponsors .placeholder:hover {
+  border-style: solid;
+}
+.sponsors img {
+  display: block;
+  height: 48px;
+  width: auto;
+}
 .header-logo {
   background-color: #f15a24;
 }
@@ -7782,6 +7822,53 @@ section h2:after {
   background-color: #AF1E59;
   border-top-color: #991a4e;
   border-bottom-color: #991a4e;
+}
+.sponsors dt {
+  display: block;
+  font-weight: normal;
+  color: #f76a52;
+  white-space: nowrap;
+}
+.sponsors dd {
+  display: inline-block;
+  vertical-align: middle;
+}
+.sponsors #plone-gold + dd img {
+  height: 96px;
+}
+.sponsors #plone-silver + dd img {
+  height: 84px;
+}
+.sponsors #plone-bronze + dd img {
+  height: 72px;
+}
+.sponsors .btn {
+  margin: 6px auto;
+}
+.sponsors .btn-outline {
+  line-height: 19.2px;
+}
+.sponsors .thumbnail {
+  border-color: transparent;
+}
+.sponsors a {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.sponsors .placeholder {
+  line-height: 1;
+  border-style: dashed;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 72px;
+}
+.sponsors .placeholder:hover {
+  border-style: solid;
+}
+.sponsors img {
+  display: block;
+  height: 48px;
+  width: auto;
 }
 [data-stars]:before,
 [data-stars]:after {
@@ -7861,53 +7948,6 @@ hr {
 }
 .no-bottom {
   margin-bottom: 0;
-}
-.sponsors dt {
-  display: block;
-  font-weight: normal;
-  color: #f76a52;
-  white-space: nowrap;
-}
-.sponsors dd {
-  display: inline-block;
-  vertical-align: middle;
-}
-.sponsors #plone-gold + dd img {
-  height: 96px;
-}
-.sponsors #plone-silver + dd img {
-  height: 84px;
-}
-.sponsors #plone-bronze + dd img {
-  height: 72px;
-}
-.sponsors .btn {
-  margin: 6px auto;
-}
-.sponsors .btn-outline {
-  line-height: 19.2px;
-}
-.sponsors .thumbnail {
-  border-color: transparent;
-}
-.sponsors a {
-  display: inline-block;
-  margin-bottom: 0;
-}
-.sponsors .placeholder {
-  line-height: 1;
-  border-style: dashed;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 72px;
-}
-.sponsors .placeholder:hover {
-  border-style: solid;
-}
-.sponsors img {
-  display: block;
-  height: 48px;
-  width: auto;
 }
 .block {
   display: block!important;
@@ -8050,9 +8090,6 @@ strong {
   overflow: auto;
   border: 1px solid #f76a52;
   margin-bottom: 28px;
-}
-.navbar-no-border {
-  border-bottom: 0!important;
 }
 .input-align {
   padding: 7px 0;
