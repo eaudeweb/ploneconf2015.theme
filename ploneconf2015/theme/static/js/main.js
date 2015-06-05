@@ -185,4 +185,17 @@ $(document).ready(function() {
   // ***********************************************
   // Initialize map on venue page // previous map.js
   loadScript();
+
+  // 
+  $("[data-toggle='dropdown']").on("click", function() {
+    console.log("ola!");
+    $(this).closest(".dropdown").addClass("is_open");
+    e.stopPropagation();
+  });
+  $("body").on("click", function(e) {
+    $(".is_open").removeClass("is_open");
+  });
+  $(".dropdown.is_open").click(function(e) {
+    e.stopPropagation();
+  });
 });

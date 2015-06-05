@@ -1,0 +1,30 @@
+.img-height(@height: 100%) {
+  display: block;
+  height: @height;
+  width: auto;
+}
+.img-width(@width: 100%) {
+  display: block;
+  width: @width;
+  height: auto;
+}
+
+.media {
+  position: relative;
+  padding: @padding-v;
+  border: @border;
+  border-radius: @border-radius;
+  img {
+    .img-width();
+  }
+  .caption {
+    position: absolute;
+    bottom: @padding-v;
+    left: @padding-v;
+    right: @padding-v;
+    padding: @padding-small;
+    padding-top: @padding-v; // larger padding for background gradient
+    font-size: smaller;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.8));
+  }
+}

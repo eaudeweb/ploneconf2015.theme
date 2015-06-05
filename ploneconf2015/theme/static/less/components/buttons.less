@@ -1,0 +1,87 @@
+.btn {
+  display: inline-block;
+  margin: -@btn-border-width;
+  padding: @padding;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background-image: none;
+  border: @btn-border-width solid transparent;
+  border-radius: @border-radius;
+  // box-shadow: 0 .1em .1em @color-darker;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+ 
+  &:not(.btn-link) {
+    font-weight: @bold;
+    text-shadow: 0 .1em .1em @color-darker;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    outline: none;
+
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-link {
+  &:extend(a);
+}
+
+// Variant mixin
+.button-variant(@color; @bg; @border) {
+  color: @color;
+  background-color: @bg;
+  border-color: @border;
+
+  &:hover,
+  &:focus {
+    color: @color;
+    background-color: darken(@bg, 5%);
+    border-color: darken(@border, 5%);
+  }
+  &:active {
+    
+  }
+  &.active {
+
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    color: desaturate(@color, 50%);
+    background-color: desaturate(@bg, 50%);
+    border-color: desaturate(@border, 50%);
+  }
+}
+
+// Variants
+.btn-default {
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn-primary {
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+.btn-outline {
+  .button-variant(@body-color; transparent; @border-color);
+  text-shadow: none;
+}
+.btn-yellow {
+  .button-variant(@btn-default-color; @color-yellow; @color-yellow);
+}

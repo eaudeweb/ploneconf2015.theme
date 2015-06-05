@@ -1,0 +1,15 @@
+.dropdown {
+  position: relative;
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+}
+
+[data-toggle="dropdown"] {
+  &:after {
+    content: "+";
+  }
+}

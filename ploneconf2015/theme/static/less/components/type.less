@@ -1,0 +1,230 @@
+html {
+  font-size: @rem;
+  @media (min-width: @screen-desktop) {
+    font-size: (@rem * 1.2);
+  }
+}
+
+body {
+  font-family: @font-family;
+  line-height: @line-height-body;
+  letter-spacing: .02em;
+  color: @body-color;
+  background-color: @body-bg;
+}
+
+a {
+  color: @color-accent;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: darken(@color-accent, 6.5%);
+    text-decoration: underline;
+  }
+
+  &:focus {
+    // .tab-focus();
+  }
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+hr {
+  margin-top:    @leading;
+  margin-bottom: @leading;
+  border: 0;
+  border-top: @border;
+}
+
+// Character styles
+.uppercase {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.muted {
+  color: @color-red;
+}
+
+strong,
+.strong {
+  color: @color-dominant;
+  font-weight: @bold;
+}
+
+// Headings
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  margin-bottom: @leading;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  line-height: @line-height-heading;
+}
+
+h1, .h1 { font-size: @font-size-h1; }
+h2, .h2 { font-size: @font-size-h2; }
+h3, .h3 { font-size: @font-size-h3; }
+h4, .h4 { font-size: @font-size-h4; }
+h5, .h5 { font-size: @font-size-h5; }
+h6, .h6 { font-size: @font-size-h6; }
+
+p {
+  margin: 0 0 @leading;
+}
+
+// Lists
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: @leading;
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+.list-inline {
+  .no-list();
+  > li {
+    display: inline-block;
+    margin-left: @padding-h;
+    margin-right: @padding-h;
+    &:first-child { margin-left: 0; }
+    &:last-child  { margin-right: 0; }
+  }
+}
+
+.list-numbered {
+  &:extend(.clearfix all);
+  padding-left: (@indent + @padding-h);
+  list-style: none;
+  counter-reset: numbers;
+  > li {
+    counter-increment: numbers;
+    margin-bottom: @leading;
+    clear: both;
+
+    &:before {
+      content: counter(numbers);
+      .square(@indent);
+      box-sizing: content-box;
+      display: block;
+      float: left;
+      margin-left: (-@indent - @padding-h);
+      line-height: @indent;
+      font-size: larger;
+      font-weight: @bold;
+      color: @color-dominant;
+      text-align: center;
+      border: @border;
+      border-radius: 50%;
+    }
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: @leading;
+}
+dt {
+  .strong();
+}
+dd {
+  margin-left: 0;
+}
+
+.dl-horizontal {
+  dd {
+    &:extend(.clearfix all);
+  }
+
+  @media (min-width: @screen-phone) {
+    dt {
+      float: left;
+      width: (@indent-media - @padding-h);
+      clear: left;
+      .ellipsis();
+    }
+    dd {
+      margin-left: @indent-media;
+    }
+  }
+}
+
+// Paragraph styles
+.page-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: @color-dominant;
+  line-height: 1.4;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid;
+  .section-front-page & {
+    display: none;
+  }  
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: @padding-v-huge;
+  font-family: 'Sprite Graffiti', @font-family;
+  font-size: 50px;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 0 0 3px @color-dominant;
+  &:before,
+  &:after {
+    color: @color-dominant;
+    content: "=";
+  }
+}
+
+.heading {
+  .strong();
+  margin-top: (@leading / 2);
+  margin-bottom: 0;
+}
+
+h6 {
+  &:extend(.heading);
+}
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }

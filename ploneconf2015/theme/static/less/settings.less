@@ -1,0 +1,140 @@
+// Media query breakpoints
+@screen-phone:               640px;
+@screen-tablet:              1024px;
+@screen-desktop:             1360px;
+@screen-retina:              1600px;
+
+  //=>
+  @screen-phone-max:           (@screen-phone - 1px);
+  @screen-tablet-max:          (@screen-tablet - 1px);
+  @screen-desktop-max:         (@screen-desktop - 1px);
+  @screen-retina-max:          (@screen-retina - 1px);
+
+  @screen-breakpoint:          @screen-tablet;
+  @screen-breakpoint-max:      (@screen-tablet - 1px);
+
+
+// Metrics
+@rem:                        16px;
+@gutter:                     2em;
+@reading-width:              (60 - (2 * @gutter));
+@grid-gutter:                2rem;
+@grid-columns:               12;
+
+@container-desktop:          (@screen-desktop - 2 * @rem);
+
+@padding-v-small:            .1rem;
+@padding-h-small:            .25rem;
+@padding-v:                  .4rem;
+@padding-h:                  .75rem;
+@padding-x:                  1rem;
+@padding-v-large:            .6rem;
+@padding-h-large:            1rem;
+@padding-v-huge:             2rem;
+@padding-h-huge:             2rem;
+
+  //=>
+  @padding-small:              @padding-v-small @padding-h-small;
+  @padding:                    @padding-v @padding-h;
+  @padding-large:              @padding-v-large @padding-h-large;
+
+@border-radius-small:        .1em;
+@border-radius:              .25em;
+@border-radius-large:        .4em;
+
+// Layers
+@z-parallax:                 100;
+
+// Typography
+@font-path:                  "../fonts/";
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,latin-ext);
+/* Sprite Graffiti by Fontfabric (www.fontfabric.com) */
+@font-face {
+  font-family: 'Sprite Graffiti';
+  src: url('@{font-path}sprite_graffiti.eot');
+  src: url('@{font-path}sprite_graffiti.eot?#iefix') format('embedded-opentype'),
+    url('@{font-path}sprite_graffiti.woff') format('woff'),
+    url('@{font-path}sprite_graffiti.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-family-sans-serif:     "Roboto", sans-serif;
+@font-family-serif:          serif;
+@font-family-monospace:      monospace;
+  
+  // =>
+  @font-family:                @font-family-sans-serif;
+
+@body-size:                  16px;
+@body-color:                 #fff;
+@body-bg:                    @color-purple;
+@body-bg-alt:                #3F2045;
+@line-height-body:           1.4;
+@line-height-heading:        1.2;
+@leading:                    @padding-x;
+@indent:                     2rem;
+@indent-media:               8rem;
+
+// =>
+@line:                       (@line-height-body * 1rem);
+@line-full:                  (@line + @padding-v * 2);
+
+@font-size-h1:                    3rem;
+@font-size-h2:                    2.5rem;
+@font-size-h3:                    2rem;
+@font-size-h4:                    1.4rem;
+@font-size-h5:                    1.2rem;
+@font-size-h6:                    1rem;
+
+@bold:                       600;
+
+// Swatches
+@color-purple:               #38133F;
+@color-red:                  #AF1E59;
+@color-orange:               #F15A24;
+@color-yellow:               #FFB205;
+@color-cream:                #FFC06E;
+@color-green:                #00BC8C; // #06CB45; // #00BC8C;
+
+@color-darker:               rgba(0,0,0,.4);
+@color-lighter:              rgba(255,255,255,.2);
+
+  // =>
+  @color-accent:               @color-green;
+  @color-dominant:             @color-orange;
+
+@border-color:               @color-orange;
+@border-width:               2px;
+  // =>
+  @border:                     @border-width solid @border-color;
+
+
+// Buttons
+@btn-font-weight:            normal;
+@btn-border-width:           @border-width;
+
+@btn-default-color:          #fff;
+@btn-default-border:         @color-dominant;  
+@btn-default-bg:             @color-dominant;
+
+@btn-primary-color:          #fff;
+@btn-primary-bg:             @color-accent;
+@btn-primary-border:         @color-accent;
+
+@btn-outline-color:          #fff;
+@btn-outline-bg:             transparent;
+@btn-outline-border:         @color-orange;
+
+// Labels
+@label-color:                #fff;
+@label-default:              @color-dominant;
+
+
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+

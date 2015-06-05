@@ -1,0 +1,78 @@
+.box {
+  &:extend(.clearfix all);
+  position: relative;
+  margin-bottom: @leading;
+  padding: @padding-x;
+  text-shadow: 0 .1em .1em @color-darker;
+  border-radius: @border-radius;
+
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6,
+  p {
+    color: inherit;
+    margin-bottom: (@leading / 2);
+  }
+  label,
+  legend,
+  input {
+    color: inherit;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  hr {
+    border-top-color: @body-color;
+  }
+
+  @media (min-width: @screen-tablet) {
+    display: table;
+    width: 100%;
+    .box-body,
+    .box-cta {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .box-body {
+      padding-right: @padding-h;
+    }
+    .box-cta {
+      width: @indent-media;
+    }
+    &:not(.box-transparent) .box-cta {
+      -webkit-padding-start: 1.5em;
+      -webkit-clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%);
+      -webkit-border-radius: 0;
+      border: 0;
+    }
+  }
+}
+
+.box-variant(@bg; @border: transparent) {
+  background-color: @bg;
+  border: @border;
+}
+
+.box-default {
+  .box-variant(@color-red);
+}
+
+.box-form {
+  .box-variant(@color-cream);
+  color: @body-bg;
+  text-shadow: none;
+}
+
+.box-transparent {
+  padding: 0;
+  color: @color-orange;
+}
+
+.box-outline {
+  .box-variant(transparent, @border);
+}

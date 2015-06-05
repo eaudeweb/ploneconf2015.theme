@@ -1,0 +1,45 @@
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.clearfix {
+  .clearfix();
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+.no-list() {
+  padding-left: 0;
+  list-style: none;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.vertical-align() {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.square(@size) {
+  width: @size;
+  height: @size;
+}
+
+.center-block() {
+  margin-left: auto;
+  margin-right: auto;
+}

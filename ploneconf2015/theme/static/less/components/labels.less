@@ -1,0 +1,39 @@
+.label {
+  display: inline-block;
+  padding: .25em .4em .25em;
+  line-height: 1;
+  color: @label-color;
+  text-align: center;
+  text-shadow: 0 .1em .1em @color-darker;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+
+  a& {
+    &:hover,
+    &:focus {
+      color: @label-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  &:empty {
+    display: none;
+  }
+}
+
+.label-variant(@color) {
+  background-color: @color;
+  
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: darken(@color, 10%);
+    }
+  }
+}
+
+.label-default {
+  .label-variant(@label-default);
+}

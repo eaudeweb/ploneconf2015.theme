@@ -1,0 +1,25 @@
+.header-logo {
+  background-color: @color-orange;
+  .logo {
+    position: relative;
+    z-index: (@z-parallax + 1);
+    @media (max-width: @screen-tablet-max) {
+      margin-bottom: -13%;
+    }
+    @media (min-width: @screen-tablet) {
+      margin-bottom: -24%;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

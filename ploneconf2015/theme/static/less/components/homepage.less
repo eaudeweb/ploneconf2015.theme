@@ -1,0 +1,112 @@
+// Illustration parallax
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 300ms ease;
+}
+
+.layers(@counter) when (@counter > 0) {
+  .layers((@counter - 1));
+  .layer-@{counter}:extend(.layer) {
+    z-index: (@z-parallax - @counter);
+  }
+}
+
+#layer-1,
+#layer-2,
+[data-layer] {
+  .layer();
+}
+
+.parallax {
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .layer-0 {
+    position: relative;
+    z-index: @z-parallax;
+  }
+
+  .layers(4);
+
+  background-color: @color-orange;
+}
+
+// Location
+#location-photos {
+  *display: none;
+  position: relative;
+  display: block;
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 65%;
+  }
+  img {
+    position: absolute;
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #fff;
+    box-shadow: 0 1px 5px -2px rgba(0,0,0,.6);
+    transition: all 360ms ease;
+  }
+}
+
+#location-1 {
+  top: 5%;
+  left: 13%;
+  z-index: 5;
+  max-width: 30%;
+  transform: rotateZ(-3.5deg);
+  .active & {
+    top: 4%;
+    left: 11%;
+    transform: rotateZ(-5deg);
+  }
+}
+
+#location-2 {
+  top: 6%;
+  left: 38%;
+  z-index: 4;
+  max-width: 44%;
+  transform: rotateZ(5deg);
+  .active & {
+    top: 3%;
+    left: 42%;
+    transform: rotateZ(8deg);
+  }
+}
+#location-3 {
+  top: 36%;
+  left: 35%;
+  z-index: 6;
+  max-width: 46%;
+  transform: rotateZ(-2deg);
+  .active & {
+    top: 39%;
+    left: 37%;
+    transform: rotateZ(2deg);
+  }
+}
+
+// Updates
+.update-icons {
+  .list-inline();
+  li {
+    margin: 0 @grid-gutter;
+    max-width: 180px;
+    overflow: hidden;
+  }
+  a {
+    height: 2.4em;
+  }
+}

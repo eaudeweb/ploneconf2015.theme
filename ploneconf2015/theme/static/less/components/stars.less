@@ -1,0 +1,22 @@
+[data-stars] {
+  &:before,
+  &:after {
+    .fa-base();
+    color: @brand-warning;
+  }
+}
+[data-stars="1"]:after {
+  content: "@{fa-var-star}";
+}
+[data-stars="2"]:after {
+  content: "@{fa-var-star}@{fa-var-star}";
+}
+[data-stars="3"]:after {
+  content: "@{fa-var-star}@{fa-var-star}@{fa-var-star}";
+}
+[data-stars="4"]:after {
+  content: "@{fa-var-star}@{fa-var-star}@{fa-var-star}@{fa-var-star}";
+}
+[data-stars="5"]:after {
+  content: "@{fa-var-star}@{fa-var-star}@{fa-var-star}@{fa-var-star}@{fa-var-star}";
+}

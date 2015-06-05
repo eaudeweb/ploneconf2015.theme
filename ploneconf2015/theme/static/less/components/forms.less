@@ -1,0 +1,145 @@
+@table-border: @color-orange;
+@form-table-border: @body-bg;
+
+.form-table {
+  counter-reset: legend;
+  fieldset {
+    &:extend(clearfix all);
+    counter-increment: legend;
+    padding: 0;
+    margin: -@border-width 0 0;
+    border: @border-width solid;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .legend {
+    margin: 0;
+    padding: @padding;
+    text-transform: uppercase;
+    font-weight: bold;
+    &:before {
+      content: counter(legend);
+      display: block;
+      box-sizing: content-box;
+      float: left;
+      width: 1em;
+      margin-top: -@padding-v;
+      margin-left: -@padding-h;
+      margin-right: @padding-h;
+      padding: @padding;
+      text-align: center;
+      border-right: 1px solid;
+    }
+  }
+  .form-group {
+    border-top: 1px solid;
+    border-right: 1px solid;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+.form-radios {
+  label {
+    border-top: 1px solid;
+    border-right: 1px solid;
+    &:last-child {
+      border-right: 0;
+    }
+    display: block;
+    float: left;
+    width: percentage((1 / 7));
+    text-align: center;
+    input[type="radio"] {
+      display: none;
+    }
+    &:hover,
+    &:focus {
+      background-color: #eee;
+    }
+    &.is_focused {
+      background-color: @color-dominant;
+    }
+    &.is_checked {
+      background-color: @color-dominant;
+      color: #fff;
+    }
+  }
+}
+
+label {
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  font-weight: normal;
+  &[for]:hover {
+    cursor: pointer;
+  }
+}
+
+.form-toolbar {
+  &:extend(.clearfix all);
+  margin-top: @leading;
+  [type="reset"] {
+    color: inherit;
+    font-size: smaller;
+    opacity: .75;
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
+
+.form-group {
+  label {
+    position: relative;
+    z-index: 2;
+    display: block;
+    float: left;
+    margin-bottom: -@line;
+    font-size: smaller;
+    line-height: @line;
+  }
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    box-sizing: content-box;
+    display: block;
+    width: 100%;
+    height: @line-full;
+    margin: 0 (-@grid-gutter / 2);
+    padding: @line (@grid-gutter / 2) 0;
+    line-height: @line-full;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    &:hover,
+    &:focus {
+      background-color: #eee;
+    }
+  }
+  textarea {
+    height: auto;
+  }
+}
+
+* {
+  outline-color: @color-green;
+}
+
+

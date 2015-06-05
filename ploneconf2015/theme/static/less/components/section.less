@@ -1,0 +1,94 @@
+section {
+  margin-top: -@border-width;
+  padding: @padding-v-huge 0;
+  border-top: @border;
+  border-bottom: @border;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+  
+  h2 {
+    .section-title();
+  }
+}
+
+// Specific sections
+#location {
+  @media (max-width: @screen-phone-max) {
+    text-align: center;
+  }
+}
+
+#things-to-do {
+  @media (max-width: @screen-phone-max) {
+    text-align: center;
+    li:before {
+      float: none;
+      margin: 0 auto @leading;
+    }
+    .media {
+      width: 30rem;
+      max-width: 100%;
+      margin: 0 auto @leading;
+    }
+  }
+  @media (min-width: @screen-phone) {
+    .to-do-tags {
+      float: left;
+    }
+    p {
+      clear: left;
+    }
+    .media {
+      float: right;
+      max-width: 15rem;
+      margin-left: @padding-h-large;
+    }
+  }
+  @media (min-width: @screen-tablet) {
+    .media {
+      max-width: 20rem;
+    }
+  }
+}
+
+#volunteer {
+  .box {
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+#footer,
+#schedule,
+#sponsors,
+#updates {
+  text-align: center;
+}
+
+#updates {
+  form {
+    max-width: 40em;
+    margin-bottom: @leading;
+    .center-block();
+  }
+  h6 {
+    margin-bottom: 0;
+  }
+  img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    .center-block();
+  }
+}
+
+#footer {
+  .btn-success {
+    width: 100%;
+    max-width: 12em;
+    .center-block();
+    margin-bottom: @leading;
+  }
+}

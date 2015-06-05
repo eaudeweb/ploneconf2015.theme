@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
-  <link rel="stylesheet" href="css/bootstrap.css" media="not print">
-  <link rel="stylesheet" href="css/bootstrap.print.css" media="print">
-  <link rel="stylesheet" href="css/print.css" media="print">
+  <link rel="stylesheet" href="css/main.css" media="not print">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -30,49 +28,38 @@
   </div>
 
   <div class="container">
-    <div id="navbar" class="navbar navbar-default">
-      <!-- <div class="navbar-header">
-        <button type="button"
-                class="navbar-toggle"
-                data-toggle="collapse"
-                data-target=".navbar-collapse">
-          <span class="fa fa-bars"></span>
-        </button>
-        <a class="navbar-brand" href="#">Plone Conf. Bucharest 2015</a>
-      </div> -->
+    <div id="navbar" class="navbar">
+      <ul class="navbar-menu plone-globalnav-left">
+        <!-- <li><a href="#">Schedule</a></li> -->
+        <li class="dropdown">
+          <a href="#">Location</a>
+          <!-- <span data-toggle="dropdown"></span> -->
 
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav plone-globalnav-left">
-          <!-- <li><a href="#">Schedule</a></li> -->
-          <li class="dropdown">
-            <a data-toggle="dropdown" href="#">Location</a>
-            <ul class="dropdown-menu">
-              <li><a href="">The Venue</a></li>
-              <li><a href="">From the airport</a></li>
-              <li><a href="">Accommodation</a></li>
-              <li><a href="">Things to do</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Training</a></li>
-          <li><a href="#">Sprints</a></li>
-          <li><a href="#">Sponsorship</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right plone-globalnav-right">
-          <li>
-            <a class="btn btn-outline btn-block btn-rounded">Submit talk</a>
-          </li>
-          <li id="plone-buy-tickets-header">
-            <a class="btn btn-success btn-block btn-rounded">Buy your tickets</a>
-          </li>
-        </ul>
-      </div>
+          <ul class="dropdown-menu">
+            <li><a href="">The Venue</a></li>
+            <li><a href="">From the airport</a></li>
+            <li><a href="">Accommodation</a></li>
+            <li><a href="">Things to do</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Training</a></li>
+        <li><a href="#">Sprints</a></li>
+        <li><a href="#">Sponsorship</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="navbar-menu navbar-right plone-globalnav-right">
+        <li>
+          <a class="btn btn-outline">Submit talk</a>
+        </li>
+        <li id="plone-buy-tickets-header">
+          <a class="btn btn-primary">Buy tickets</a>
+        </li>
+      </ul>
     </div>
   </div>
 
 
   <div id="main" class="container">
-    <h1 class="page-header"></h1>
     <div id="plone-content">
 
     <section id="schedule">
@@ -232,16 +219,12 @@
     </div>
 
     <section id="volunteer">
-      <div class="alert alert-danger no-bottom">
-        <h4>Volunteer at Plone Conference 2015!</h4>
-        <div class="row">
-          <div class="col-sm-9 col-lg-10">
-            <div class="input-align">We welcome any volunteers to come help us out at the 2015 Plone Conference.</div>
-          </div>
-          <div class="col-sm-3 col-lg-2">
-            <a href="#" class="volunteer btn btn-warning btn-block">Apply here!</a>
-          </div>
+      <div class="box box-transparent">
+        <div class="box-body">
+          <h4>Volunteer at Plone Conference 2015!</h4>
+          <p>We welcome any volunteers to come help us out at the 2015 Plone Conference.</p>
         </div>
+        <a href="#" class="box-cta btn btn-outline">Apply here!</a>
       </div>
     </section>
 
@@ -250,110 +233,90 @@
 
       <dl class="sponsors">
         <dt class="plone-host">Host</dt>
-        <dd>
-        <a href="http://eaudeweb.ro" rel="nofollow"
-           title="Eau de Web"
-           class="thumbnail">
-          <img src="img/logo-edw.png" alt="">
-        </a>
+        <dd class="sponsor sponsor-host">
+          <a href="http://eaudeweb.ro" rel="nofollow"
+             title="Eau de Web">
+            <img src="img/logo-edw.png" alt="">
+          </a>
         </dd>
         <dt id="plone-gold">Gold sponsors</dt>
-        <dd>
+        <dd class="sponsor sponsor-placeholder">
           <a href=""
-             title="Learn more about our sponsoring packages"
-             class="btn btn-outline placeholder">Your<br>Logo<br>Here</a>
-          <a href=""
-             title="Learn more about our sponsoring packages"
-             class="btn btn-outline placeholder">Your<br>Logo<br>Here</a>
-          <a href=""
-             title="Learn more about our sponsoring packages"
-             class="btn btn-outline placeholder">Your<br>Logo<br>Here</a>
+             title="Learn more about our sponsoring packages">Your<br>Logo<br>Here</a>
         </dd>
         <dt id="plone-silver">Silver sponsors</dt>
-        <dd>
+        <dd class="sponsor sponsor-silver">
           <a href="http://www.abstract-technology.com" rel="nofollow"
-             title="Abstract"
-             class="thumbnail">
+             title="Abstract">
             <img src="img/logo-abstract.png">
           </a>
         </dd>
         <dt id="plone-bronze">Bronze sponsors</dt>
-        <dd>
+        <dd class="sponsor sponsor-bronze">
           <a href="http://www.netsight.co.uk/" rel="nofollow"
-             title="Netsight"
-             class="thumbnail">
+             title="Netsight">
             <img src="img/logo-netsight.png">
           </a>
         </dd>
-        <dd>
+        <dd class="sponsor sponsor-bronze">
           <a href="http://www.cmscom.jp/" rel="nofollow"
-             title="CMS Communications Inc."
-             class="thumbnail">
+             title="CMS Communications Inc.">
             <img src="img/logo-cmscom.png">
           </a>
         </dd>
-        <dd>
+        <dd class="sponsor sponsor-bronze">
           <a href="http://www.starzel.de/" rel="nofollow"
-             title="Starzel.de"
-             class="thumbnail">
+             title="Starzel.de">
             <img src="img/logo-starzel.png">
           </a>
         </dd>
         <dt id="plone-supporting">Supporting partners</dt>
-        <dd>
+        <dd class="sponsor sponsor-supporting">
         <a href="http://www.rosedu.org" rel="nofollow"
-           title="ROSEdu - Romanian Open Source Education"
-           class="thumbnail">
+           title="ROSEdu - Romanian Open Source Education">
           <img src="img/logo-rosedu.png">
         </a>
         </dd>
-        <dd>
+        <dd class="sponsor sponsor-supporting">
         <a href="http://www.pixelblaster.ro" rel="nofollow"
-           title="Pixelblaster"
-           class="thumbnail">
+           title="Pixelblaster">
           <img src="img/logo-pixelblaster.png">
         </a>
         </dd>
-        <dd>
+        <dd class="sponsor sponsor-supporting">
         <a href="https://www.fastdigitech.ro" rel="nofollow"
-           title="Fast Digitech SRL"
-           class="thumbnail">
+           title="Fast Digitech SRL">
           <img src="img/logo-fastdigitech.png">
         </a>
         </dd>
-        <dd>
+        <dd class="sponsor sponsor-supporting">
         <a href="http://www.exclusivtravel.ro" rel="nofollow"
-           title="SC Exclusiv Travel SRL"
-           class="thumbnail">
+           title="SC Exclusiv Travel SRL">
           <img src="img/logo-exclusivtravel.png">
         </a>
         </dd>
         <dt id="plone-media">Media partners</dt>
-        <dd>
+        <dd class="sponsor sponsor-media">
           <a href="http://metropotam.ro" rel="nofollow"
-             title="Metropotam.ro"
-             class="thumbnail">
+             title="Metropotam.ro">
             <img src="img/logo-metropotam.png">
           </a>
         </dd>
-        <dd>
+        <dd class="sponsor sponsor-media">
           <a href="http://stiam.ro" rel="nofollow"
-             title="Stiam.ro"
-             class="thumbnail">
+             title="Stiam.ro">
             <img src="img/logo-stiam.ro.png">
           </a>
         </dd>
-        <dd>
+        <dd class="sponsor sponsor-media">
           <a href="http://b365.ro" rel="nofollow"
-             title="B365.ro"
-             class="thumbnail">
+             title="B365.ro">
             <img src="img/logo-b365.png">
           </a>
         </dd>
-        <dd>
+        <dd class="sponsor sponsor-media">
         <a href="http://plone.ro" rel="nofollow"
-           title="Plone user's group Romania"
-           class="thumbnail">
+           title="Plone user's group Romania">
           <img src="img/logo-plone.ro.png">
         </a>
         </dd>
@@ -370,7 +333,7 @@
         <img src="img/ploneconf2015-logo-dark.svg" alt="Plone conf. 2015 logo">
       </a>
 
-      <a href="" id="plone-buy-tickets-footer" class="btn btn-success btn-rounded">Buy your ticket</a>
+      <a href="" id="plone-buy-tickets-footer" class="btn btn-success btn-rounded">Buy tickets</a>
       <p>
         <a href="" class="schedule btn btn-link">Schedule</a> |
         <a href="" class="training btn btn-link">Training</a> |
@@ -384,7 +347,6 @@
 
   <!-- scripts -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/TimelineMax.min.js"></script>
   <script type="text/javascript" src="js/TweenMax.min.js"></script>
   <script type="text/javascript" src="js/jquery.scrollmagic.min.js"></script>
