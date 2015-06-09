@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'ENISA icons';
+  src: url('@{font-path}enisa-icons.eot');
+  src: url('@{font-path}enisa-icons.eot?#iefix') format('embedded-opentype'),
+    url('@{font-path}enisa-icons.woff') format('woff'),
+    url('@{font-path}enisa-icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-base() {
+  font-family: 'ENISA icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon {
+  .icon-base();
+}
+
+
+@icon-tshirt: "\e600";
+@icon-graduation: "\f19d";
+@icon-microphone: "\e91e";
+@icon-ticket: "\e939";
+@icon-cart: "\e93a";
+@icon-keyboard: "\e955";
+@icon-quotes-left: "\e977";
+@icon-quotes-right: "\e978";
+@icon-star: "\e9d9";
+@icon-add: "\ea0a";
+@icon-close: "\ea0f";
+
+.icon-tshirt:before          { content: @icon-tshirt; }
+.icon-graduation:before      { content: @icon-graduation; }
+.icon-microphone:before      { content: @icon-microphone; }
+.icon-ticket:before          { content: @icon-ticket; }
+.icon-cart:before            { content: @icon-cart; }
+.icon-keyboard:before        { content: @icon-keyboard; }
+.icon-quotes-left:before     { content: @icon-quotes-left; }
+.icon-quotes-right:before    { content: @icon-quotes-right; }
+.icon-star:before            { content: @icon-star; }
+.icon-add:before             { content: @icon-add; }
+.icon-close:before           { content: @icon-close; }
