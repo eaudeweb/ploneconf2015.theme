@@ -47,6 +47,10 @@ hr {
   page-break-inside: avoid;
   page-break-after: always;
 }
+.invoice-head {
+  margin-top: 18pt;
+  margin-bottom: 24pt;
+}
 .invoice-customer,
 .invoice-details,
 .invoice-company {
@@ -55,11 +59,15 @@ hr {
 }
 .invoice-details {
   table {
-    width: 100%;
-  }
-  td {
-    padding: 3pt;
+    table-layout: fixed;
+    margin: 0 auto;
     border: 1pt solid;
+  }
+  th {
+    text-align: right;
+  }
+  td, th {
+    padding: 3pt;
   }
 }
 
