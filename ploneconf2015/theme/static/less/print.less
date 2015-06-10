@@ -1,0 +1,130 @@
+// Init
+@import (less) "../node_modules/normalize.css/normalize.css";
+@import "settings.less";
+
+// Helpers
+// @import "helpers/misc.less";
+
+// Components
+// @import "components/type.less";
+
+body {
+  font-family: @font-family;
+  color: black;
+  background: none;
+}
+a,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
+
+}
+
+.text-left  { text-align: left; }
+.text-right { text-align: right; }
+
+.header-logo,
+.parallax,
+.navbar,
+#sponsors,
+#footer {
+  display: none;
+}
+
+hr {
+  height: 0;
+  background: none;
+  border: 0;
+  border-top: 2pt solid;
+}
+
+.invoice {
+  page-break-inside: avoid;
+  page-break-after: always;
+}
+
+.invoice-details {
+  width: 220pt;
+  float: right;
+  overflow: auto;
+  dt {
+    float: left;
+    clear: left;
+    width: 120pt;
+  }
+  dd {
+    font-weight: bold;
+    text-align: right;
+    margin: 0;
+  }
+}
+
+.invoice-body {
+  width: 100%;
+  margin: 1em 0;
+  td, th {
+    padding: 3pt 5pt;
+    &:first-child { padding-left: 0; }
+    &:last-child { padding-right: 0; }
+  }
+  thead th {
+    border-bottom: 2pt solid;
+  }
+  tfoot tr:first-child td {
+    border-top: 1pt solid;
+  }
+}
+
+.ticket {
+  @line: 18pt;
+  page-break-inside: avoid;
+  padding: (@line / 2) 0;
+  border-bottom: 1pt dashed;
+  // color: @color-purple;
+  .ticket-title {
+    margin: 0 0 (@line / 2);
+    font-size: 18pt;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: (@line / 2);
+    font-family: @font-family-monospace;
+    font-size: 12pt;
+    line-height: @line;
+    border-collapse: collapse;
+  }
+  td {
+    padding: 2pt 5pt;
+    border: 2pt solid;
+  }
+  .qr {
+    width: ((@line + 6pt) * 4);
+    padding: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  address {
+    display: inline;
+  }
+  .ticket-logo {
+    display: block;
+    height: 60pt;
+    width: auto;
+    margin: 0 auto;
+  }
+}
+address {
+  font-style: normal;
+}
