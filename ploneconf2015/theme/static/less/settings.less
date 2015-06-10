@@ -94,13 +94,14 @@
 @color-orange:               #F15A24;
 @color-yellow:               #FFB205;
 @color-cream:                #FFC06E;
-@color-green:                #00BC8C; // #06CB45; // #00BC8C;
+@color-green:                #0BDC89; // #00BC8C; // #06CB45;
 
 @color-darker:               rgba(0,0,0,.4);
 @color-lighter:              rgba(255,255,255,.2);
 
   // =>
   @color-accent:               @color-green;
+  @color-accent-fill:          darken(@color-accent, 6.5%);
   @color-dominant:             @color-orange;
 
 @border-color:               @color-orange;
@@ -118,8 +119,8 @@
 @btn-default-bg:             @color-dominant;
 
 @btn-primary-color:          #fff;
-@btn-primary-bg:             @color-accent;
-@btn-primary-border:         @color-accent;
+@btn-primary-bg:             @color-accent-fill;
+@btn-primary-border:         @color-accent-fill;
 
 @btn-outline-color:          #fff;
 @btn-outline-bg:             transparent;
