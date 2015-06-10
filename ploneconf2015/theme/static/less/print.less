@@ -47,20 +47,17 @@ hr {
   page-break-inside: avoid;
   page-break-after: always;
 }
-
+.invoice-customer,
+.invoice-details,
+.invoice-company {
+  float: left;
+  width: 33.333%;
+}
 .invoice-details {
-  width: 220pt;
-  float: right;
-  overflow: auto;
-  dt {
-    float: left;
-    clear: left;
-    width: 120pt;
-  }
-  dd {
-    font-weight: bold;
-    text-align: right;
-    margin: 0;
+  width: 100%;
+  td {
+    padding: 3pt;
+    border: 1pt solid;
   }
 }
 
