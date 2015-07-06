@@ -4,15 +4,26 @@ module.exports = function(grunt) {
   grunt.initConfig({
     less: {
       development: {
+         options: {
+          compress: true,
+          yuicompress: true,
+          optimization: 2,
+          sourceMap: true,
+          sourceMapURL: "main.css.map"
+        },
+        files: {"css/main.css": "less/main.less"}
+      }
+    },
+    print: {
+      development: {
         options: {
           compress: true,
           yuicompress: true,
-          optimization: 2
+          optimization: 2,
+          sourceMap: true,
+          sourceMapURL: "print.css.map"
         },
-        files: {
-          "css/main.css": "less/main.less",
-          "css/print.css": "less/print.less"
-        }
+        files: {"css/print.css": "less/print.less"}
       }
     },
     watch: {
