@@ -1,0 +1,61 @@
+.preview {
+  label {
+    margin-bottom: 1rem;
+    float:none;
+  }  
+}
+
+.avatar-option {
+  .media();
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  // border-style:none;
+  // margin: 0 2.5rem 1rem 2.5rem;
+  .avatar-image,
+  .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    border: @border-width solid transparent;
+  }
+  .avatar-placeholder {
+    padding: .2rem;
+    text-align: center;
+    line-height: 1.2;
+    font-size: smaller;
+    color: @color-cream;
+    background: @color-darker;
+  }
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .is_selected {
+    border-color: @color-dominant;
+  }
+}
+
+.talk{
+  .box();
+  .box-outline();
+}
+
+.speaker-avatar { 
+  margin-right: 1rem;
+  float: left;  
+  img {
+    display: block;  
+    width: 4.5rem;
+    height: auto;
+  }  
+}  
+
+.speaker-details {   
+  overflow: auto;
+}
+
+ 
