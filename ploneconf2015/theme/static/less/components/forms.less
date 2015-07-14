@@ -50,7 +50,7 @@
     vertical-align: bottom;
     text-align: center;
     border-top: 1px solid;
-    border-right: 1px solid;
+    border-right: 1px solid;    
     .icon {
       display: block;
       line-height: 3rem;
@@ -66,7 +66,10 @@
       background-color: #eee;
     }
     &.is_selected {
-      font-weight: bold;
+      font-weight: bold;  
+      background-color: @color-purple;
+      color: @body-color;
+      border-color: @color-purple;    
       .icon {
         color: @color-dominant;
       }
