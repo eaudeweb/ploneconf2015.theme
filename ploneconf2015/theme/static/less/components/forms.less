@@ -107,12 +107,13 @@ label {
 }
 
 .form-group {
+  padding-top: .5rem;
   & > label {
     position: relative;
     z-index: 2;
-    display: block;
-    float: left;
-    margin-bottom: -@line;
+    display: block;   
+    height: 0;
+    margin-top: -.5rem;
     font-size: smaller;
     line-height: @line;
   }
@@ -150,6 +151,17 @@ label {
   textarea {
     height: auto;
   }
+}
+.form-group .preview-label {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  float: none;
+  height: auto;
+}
+.form-explanation {
+  font-size: small;
+  font-style: italic;
+  line-height: 1rem;
 }
 
 * {

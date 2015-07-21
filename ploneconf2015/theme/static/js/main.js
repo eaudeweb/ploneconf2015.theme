@@ -187,15 +187,25 @@ $(document).ready(function() {
   loadScript();
 
   // 
-  $("[data-toggle='dropdown']").on("click", function() {
-    console.log("ola!");
-    $(this).closest(".dropdown").addClass("is_open");
-    e.stopPropagation();
+  $('.dropdown').click(function(){
+    var target=$(this).attr('id');
+    if(target==1) {
+      $(".dropdown-list").hide();
+      $(this).attr('id', 0);
+    }
+    else {
+      $(".dropdown-list").show();
+      $(this).attr('id', 1);
+    }
   });
-  $("body").on("click", function(e) {
-    $(".is_open").removeClass("is_open");
+  $(".dropdown-list").mouseup(function(){
+    return false;
   });
-  $(".dropdown.is_open").click(function(e) {
-    e.stopPropagation();
+  $(".dropdown").mouseup(function(){
+    return false;
+  });
+  $(document).mouseup(function() {
+    $(".dropdown-list").hide();
+    $("dropdown").attr('id', '');
   });
 });
