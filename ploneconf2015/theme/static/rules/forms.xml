@@ -29,12 +29,6 @@
                   <xsl:value-of select="./@value"/>
               </button>
           </xsl:when>
-          <xsl:when css:test="[type='checkbox']">
-              <input>
-                  <xsl:copy-of select="@*" />
-                  <xsl:attribute name="class">pull-left</xsl:attribute>
-              </input>
-          </xsl:when>
           <xsl:otherwise>
               <xsl:copy-of select="."/>
           </xsl:otherwise>
