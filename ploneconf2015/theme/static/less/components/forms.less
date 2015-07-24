@@ -111,11 +111,8 @@ label {
   & > label {
     position: relative;
     z-index: 2;
-    display: block;   
-    height: 0;
-    margin-top: -.5rem;
-    font-size: smaller;
-    line-height: @line;
+    display: block;        
+    font-size: smaller;    
   }
   select,
   textarea,
@@ -138,15 +135,10 @@ label {
     width: 100%;
     height: @line-full;
     margin: 0 (-@grid-gutter / 2);
-    padding: @line (@grid-gutter / 2) 0;
-    line-height: @line-full;
+    padding: 1rem (@grid-gutter / 2) 0;    
     background-color: transparent;
     border: 0;
-    outline: none;
-    &:hover,
-    &:focus {
-      background-color: #eee;
-    }
+    outline: none;  
   }
   textarea {
     height: auto;
