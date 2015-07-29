@@ -47,17 +47,10 @@
 
 // Typography
 @font-path:                  "../fonts/";
+
 @import url(//fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,latin-ext);
 /* Sprite Graffiti by Fontfabric (www.fontfabric.com) */
-@font-face {
-  font-family: 'Sprite Graffiti';
-  src: url('@{font-path}sprite_graffiti.eot');
-  src: url('@{font-path}sprite_graffiti.eot?#iefix') format('embedded-opentype'),
-    url('@{font-path}sprite_graffiti.woff') format('woff'),
-    url('@{font-path}sprite_graffiti.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+.embed-font("Sprite Graffiti", "sprite_graffiti", normal, normal);
 @font-family-sans-serif:     "Roboto", sans-serif;
 @font-family-serif:          serif;
 @font-family-monospace:      monospace;
