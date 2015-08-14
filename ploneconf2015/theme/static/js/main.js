@@ -186,26 +186,8 @@ $(document).ready(function() {
   // Initialize map on venue page // previous map.js
   loadScript();
 
-  // 
-  $('.dropdown').click(function(){
-    var target=$(this).attr('id');
-    if(target==1) {
-      $(".dropdown-list").hide();
-      $(this).attr('id', 0);
-    }
-    else {
-      $(".dropdown-list").show();
-      $(this).attr('id', 1);
-    }
-  });
-  $(".dropdown-list").mouseup(function(){
-    return false;
-  });
-  $(".dropdown").mouseup(function(){
-    return false;
-  });
-  $(document).mouseup(function() {
-    $(".dropdown-list").hide();
-    $("dropdown").attr('id', '');
-  });
+  //hover on input boxes
+  $(".input-box").hover(function(){
+    $(this).toggleClass("is_focused");        
+  });  
 });
