@@ -52,8 +52,25 @@
   }
   .talk-description {
     margin-bottom: @leading;
-    max-height: (@line-height-body * 3em);
-    overflow: hidden;
+    // max-height: (@line-height-body * 3em);
+    // overflow: hidden;
+  }
+  [aria-expanded="false"] {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3em;
+      background: linear-gradient(to top, @body-bg, transparent);
+    }
+  }
+  [data-readmore-toggle] {
+    text-align: center;
+    font-size: smaller;
+    color: mix(@body-color, @body-bg, 70%);
   }
   .speaker {
     overflow: auto;
