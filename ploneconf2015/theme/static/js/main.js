@@ -188,6 +188,6 @@ $(document).ready(function() {
 
   //hover on input boxes
   $(".input-box").hover(function(){
-    $(this).toggleClass("is_focused");        
+    $(this).toggleClass("is_focused");
   });  
 });

@@ -29,25 +29,82 @@
   }
 }
 
-.talk{
-  .box();
-  .box-outline();
-}
-.speaker-avatar { 
-  margin-right: 1rem;
-  float: left;  
-  img {
-    display: block;  
-    width: 4.5rem;
-    height: auto;
-  }  
-}  
-
-.speaker-details {   
-  overflow: auto;
-} 
-
 .input-box.is_focused {
     background-color: #eee;
 }
 
+.talk {
+  margin: (@leading * 2) 0;
+  padding-bottom: @padding-v-huge;
+  border-bottom: @border;
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  .talk-title {
+    margin-top: 0;
+    margin-bottom: (@leading / 2);
+    font-size: @font-size-h4;
+    color: inherit;
+    line-height: @line-height-heading;
+    letter-spacing: -.01em;
+    color: @color-orange;
+  }
+  .talk-description {
+    margin-bottom: @leading;
+    max-height: (@line-height-body * 3em);
+    overflow: hidden;
+  }
+  .speaker {
+    overflow: auto;
+    margin-top: (@leading / 2);
+    display: table;
+
+    .speaker-avatar {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .speaker-details {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .speaker-avatar {
+    border-radius: 50%;
+    border: @border;
+    overflow: hidden;
+    margin-right: 1rem;
+    float: left;
+    width: 4rem;
+    img {
+      display: block;  
+      width: 100%;
+      height: auto;
+    }  
+  }
+  .speaker-details {
+    overflow: auto;
+    color: mix(@body-color, @body-bg, 70%);
+    font-size: smaller;
+  } 
+  .speaker-name {
+    margin-bottom: 0;
+    font-size: @font-size-h6;
+    font-weight: 400;
+  }
+  .speaker-social {
+    &:extend(.list-inline all);
+    > li {
+      margin-left: @padding-h-small;
+      margin-right: @padding-h-small;
+    }
+    margin-bottom: 0;
+    a {
+      color: inherit;
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+}
