@@ -125,3 +125,54 @@
     }
   }
 }
+
+.list-slots {
+  padding-left: 5rem;
+}
+.slot {
+  margin: (@leading / 2) 0;
+}
+.slot-when {
+  &:extend(strong);
+  float: left;
+  width: 4rem;
+  margin-left: -5rem;
+  padding-top: .2em;
+}
+
+.slot-what {
+  font-size: larger;
+}
+
+.slot-where {
+
+}
+
+.slot-audience {
+  .no-list;
+  display: inline-block;
+  font-size: smaller;
+  > li {
+    display: inline-block;
+    margin-right: .1em;
+    margin-left: .1em;
+    // &:after {
+    //   content: ",";
+    // }
+    // &:last-child {
+    //   &:after {
+    //     content: none;
+    //   }
+    // }
+  }
+  .audience {
+    &:extend(.muted);
+    display: inline-block;
+    padding: .1em .3em;
+    border-radius: @border-radius;
+    border: 1px solid @color-red;
+    &:empty {
+      display: none;
+    }
+  }
+}
