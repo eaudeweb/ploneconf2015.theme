@@ -62,13 +62,17 @@
   .box-variant(@color-red);
 }
 
-.box-form {
-  max-width: 40rem;
-  margin-left: auto;
-  margin-right: auto;
+.box-cream {
   .box-variant(@color-cream);
   color: @body-bg;
   text-shadow: none;
+}
+
+.box-form {
+  &:extend(.box-cream all);
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .box-transparent {

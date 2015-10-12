@@ -21,11 +21,11 @@
       line-height: 1.4;
       color: @color-dominant;
     }
-    .name {      
-      font-size: larger;      
+    .name {
+      font-size: larger;
     }
     .btn {
-      padding: 1em;     
+      padding: 1em;
       // max-width: 13em;
       // margin-left: auto;
       // margin-right: auto;
@@ -37,13 +37,13 @@
     //   .make-sm-column(4);
     // }
   }
-  // changed the space between boxes on small screens 
+  // changed the space between boxes on small screens
   @media (max-width: @screen-tablet-max) {
     margin-left: 0;
     margin-right: 0;
     li {
       padding-left:  0;
-      padding-right: 0; 
+      padding-right: 0;
       margin-right: -@border-width;
       &:hover {
         z-index: 2;
@@ -58,7 +58,7 @@
       }
       .btn {
         padding: .5em;
-        border-radius: 0;             
+        border-radius: 0;
       }
       .name {
         font-size: medium;
@@ -66,6 +66,18 @@
     }
   }
 }
+
+.talk {
+ .icon {
+   color: @color-dominant;
+ }
+ .list-inline {
+   > li {
+     margin-left: 0;
+   }
+ }
+}
+
 
 .goal-list {
   .no-list();
@@ -122,14 +134,14 @@
   }
 }
 
-.dropdown { 
-  margin-left: .2em;  
-  z-index:110;  
+.dropdown {
+  margin-left: .2em;
+  z-index:110;
 }
 
-.dropdown-list {  
+.dropdown-list {
   background-color: rgb(255, 192, 110);
-  position: absolute;  
+  position: absolute;
   z-index: 100;
   display: none;
   margin-left: .5rem;
@@ -141,8 +153,8 @@
 .is_open {
   display: block;
   background-color: rgb(255, 192, 110);
-  position: absolute;  
-  z-index: 100;  
+  position: absolute;
+  z-index: 100;
   padding: .5rem 0 .5rem;
   border-radius: @border-radius;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
@@ -153,23 +165,23 @@
 .dropdown-options {
   list-style: none;
   margin: 0;
-  padding: .5rem 0 0 0; 
+  padding: .5rem 0 0 0;
   a {
     color: @color-red;
     display: block;
     padding: .5rem 1rem;
     cursor: pointer;
     font-size: smaller;
-    white-space: nowrap;    
-  } 
+    white-space: nowrap;
+  }
   a:hover {
     background: rgba(241, 90, 36, 0.5);
-    text-decoration: none;   
+    text-decoration: none;
   }
 }
 
 .dropdown-toogle {
-  cursor: pointer; 
+  cursor: pointer;
   content: "\25BC"
 }
 
@@ -177,7 +189,7 @@
   .no-list();
   counter-reset: trainings;
   > li {
-    
+
   }
   @media (min-width: @screen-breakpoint) {
     display: table;

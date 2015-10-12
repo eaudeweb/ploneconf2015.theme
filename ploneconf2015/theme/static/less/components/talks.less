@@ -1,16 +1,16 @@
-.avatar-preview { 
-  float:left; 
-  width: 5rem; 
+.avatar-preview {
+  float:left;
+  width: 5rem;
   margin-right: .5rem;
   margin-bottom: 1rem;
-  img {   
-    .img-width();            
+  img {
+    .img-width();
   }
 }
-.avatar-options { 
+.avatar-options {
   font-size: smaller;
-  .no-list();  
-  overflow: hidden;  
+  .no-list();
+  overflow: hidden;
 }
 
 .remove-speaker {
@@ -19,7 +19,7 @@
   font-size: small;
   font-weight: normal;
   font-style: italic;
-  
+
   &:after {
     .icon();
     content: @icon-close;
@@ -29,25 +29,225 @@
   }
 }
 
-.talk{
-  .box();
-  .box-outline();
-}
-.speaker-avatar { 
-  margin-right: 1rem;
-  float: left;  
-  img {
-    display: block;  
-    width: 4.5rem;
-    height: auto;
-  }  
-}  
-
-.speaker-details {   
-  overflow: auto;
-} 
-
 .input-box.is_focused {
     background-color: #eee;
 }
 
+.talk {
+  margin: (@leading * 2) 0;
+  padding-bottom: @padding-v-huge;
+  border-bottom: @border;
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  .talk-title {
+    margin-top: 0;
+    margin-bottom: (@leading / 2);
+    font-size: @font-size-h4;
+    color: inherit;
+    line-height: @line-height-heading;
+    letter-spacing: -.01em;
+    color: @color-orange;
+  }
+  .talk-description {
+    margin-bottom: @leading;
+    // max-height: (@line-height-body * 3em);
+    // overflow: hidden;
+  }
+  [aria-expanded="false"] {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3em;
+      background: linear-gradient(to top, @body-bg, transparent);
+    }
+  }
+  [data-readmore-toggle] {
+    text-align: center;
+    font-size: smaller;
+    color: mix(@body-color, @body-bg, 70%);
+  }
+  .speaker {
+    overflow: auto;
+    margin-top: (@leading / 2);
+    display: table;
+
+    .speaker-avatar {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .speaker-details {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .speaker-avatar {
+    border-radius: 50%;
+    border: @border;
+    overflow: hidden;
+    margin-right: 1rem;
+    float: left;
+    width: 4rem;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .speaker-details {
+    overflow: auto;
+    color: mix(@body-color, @body-bg, 70%);
+    font-size: smaller;
+  }
+  .speaker-name {
+    margin-bottom: 0;
+    font-size: @font-size-h6;
+    font-weight: 400;
+  }
+  .speaker-social {
+    &:extend(.list-inline all);
+    > li {
+      margin-left: @padding-h-small;
+      margin-right: @padding-h-small;
+    }
+    margin-bottom: 0;
+    a {
+      color: inherit;
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.list-slots {
+  padding-left: 5rem;
+  > .list-slot {
+    border-bottom: 1px solid #F15A24;
+  }
+
+  > .list-slot:last-child {
+    border-bottom: none;
+  }
+}
+
+.slot {
+  margin: (@leading / 2) 0;
+}
+
+.slot-when {
+  &:extend(strong);
+  float: left;
+  width: 4rem;
+  margin-left: -5rem;
+  padding-top: .2em;
+}
+
+.slot-what {
+  font-size: larger;
+}
+
+.slot-where {
+
+}
+
+.slot-audience {
+  margin-bottom: 0;
+  .no-list;
+  display: inline-block;
+  font-size: smaller;
+  > li {
+    display: inline-block;
+    margin-right: .1em;
+    margin-left: .1em;
+    // &:after {
+    //   content: ",";
+    // }
+    // &:last-child {
+    //   &:after {
+    //     content: none;
+    //   }
+    // }
+  }
+  .audience {
+    &:extend(.muted);
+    display: inline-block;
+    padding: .1em .3em;
+    border-radius: @border-radius;
+    border: 1px solid @color-red;
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+.list-days {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+  margin-left: 5rem;
+
+  > li {
+    display: inline-block;
+    min-width: 6.3rem;
+  }
+
+  > li.current a {
+    color: white;
+  }
+}
+
+.room {
+}
+
+.room-opera {
+  color: #3f55a0;
+}
+
+.room-simfonia {
+  color: #16a800;
+}
+
+.room-opereta {
+  color: #b12d5e;
+}
+
+.room-ronda-ballroom {
+  color: #77b953;
+}
+
+.room-rapsodia {
+  color: #41b284;
+}
+
+.speakers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li {
+    display: inline-block;
+  }
+  > li:after {
+    content: "&";
+  }
+  > li:last-child:after {
+    content: "";
+  }
+}
+
+.target-audience {
+  display: none;
+}
+
+.download {
+  float: right;
+  color: #af1e59;
+  margin: 1rem 0;
+  font-size: 50%;
+}
